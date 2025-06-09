@@ -23,7 +23,19 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="Libro.cpp" />
+		<Unit filename="Libro.h" />
+		<Unit filename="Prestamos.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="Prestamos.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="funcionesPantallasInteractivas.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menuLibros.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -20,11 +20,17 @@ public:
     Fecha getFechaPubli();
     int getCantDisponible();
 
-    void setISBN( const char* ISBN);
+    void setISBN(const char* ISBN);
     void setTitulo (const char* titulo);
     void setAutor (const char* autor);
     void setFecha (Fecha fechaPubli);
     void setCantiDisponible (int cantDisponible);
+
+    void cargarLibro();
+    void mostrarLibro();
+    void editarLibro();
+    void eliminarLibro();
+
 
 };
 

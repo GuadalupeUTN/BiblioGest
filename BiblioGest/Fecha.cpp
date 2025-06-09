@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 #include "Fecha.h"
 
 Fecha::Fecha(){
@@ -36,7 +39,21 @@ void Fecha::setAnio(int anio){
     _anio = anio;
 }
 
-std::string Fecha::toString(){
-    return std::to_string(_dia) + "/" + std::to_string(_mes) + "/" + std::to_string(_anio);
+void Fecha::cargarFecha(){
+ cout << "DIA: ";
+ cin >> _dia;
+  cout << "MES: ";
+ cin >> _mes;
+  cout << "ANIO: ";
+ cin >> _anio;
+ };
+
+ void Fecha::mostrarFecha() {
+    cout << _dia << "/" << _mes << "/" << _anio;
+};
+
+std::ostream& operator<<(std::ostream& os, const Fecha& f) {
+    os << f._dia << "/" << f._mes << "/" << f._anio;
+    return os;
 }
 

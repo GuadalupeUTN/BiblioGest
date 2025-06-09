@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1749492429 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1749500192 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\fecha.h
+	<string>
+
+1749500510 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\main.cpp
+	<iostream>
+	"Libro.h"
+	"Fecha.h"
+	"funcionesPantallasInteractivas.h"
+
+1749434683 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.h
+	"Fecha.h"
+
+1749044202 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\funcionespantallasinteractivas.h
+
+1749500497 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menulibros.cpp
+	<iostream>
+	"Libro.h"
+
+1749500300 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
+	<iostream>
+	"Libro.h"
+	"Fecha.h"
+	<string.h>
+

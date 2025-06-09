@@ -16,6 +16,10 @@ class Fecha{
     void setDia(int dia);
     void setMes(int mes);
     void setAnio(int anio);
-    std::string toString();
+    void cargarFecha();
+    void mostrarFecha();
+    //Clase amiga para acceder a valores internos de la clase Fecha
+    friend std::ostream& operator<<(std::ostream& os, const Fecha& f);
+
 };
 
