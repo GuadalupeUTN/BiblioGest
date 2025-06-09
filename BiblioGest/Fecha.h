@@ -16,6 +16,9 @@ class Fecha{
     void setDia(int dia);
     void setMes(int mes);
     void setAnio(int anio);
+
+    void mostrar();
+    void cargar();
     std::string toString();
 };
 

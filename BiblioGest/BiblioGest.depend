@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1749510082 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1749510043 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\fecha.h
+	<string>
+
+1749509681 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\main.cpp
+	<iostream>
+	"Libro.h"
+	"Fecha.h"
+	"menu.h"
+	"funcionesPantallasInteractivas.h"
+
+1749422070 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\libro.h
+	"Fecha.h"
+
+1749413899 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menu.h
+
+1749422070 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\funcionespantallasinteractivas.h
+
+1749416378 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menu.cpp
+	<iostream>
+	<cstring>
+	"Menu.h"
+	"Socio.h"
+	"SocioArchivo.h"
+
+1749412472 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socio.h
+	"Fecha.h"
+
+1749413930 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socioarchivo.h
+	"Socio.h"
+
+1749413920 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socioarchivo.cpp
+	<cstdio>
+	"SocioArchivo.h"
+
+1749509982 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\libro.cpp
+	"Libro.h"
+	<string.h>
+
+1749402610 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socio.cpp
+	<cstring>
+	<iostream>
+	"Socio.h"
+
