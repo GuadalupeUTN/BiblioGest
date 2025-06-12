@@ -23,7 +23,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoLibros.cpp" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="Libro.cpp" />
+		<Unit filename="Libro.h" />
+		<Unit filename="Prestamos.cpp" />
+		<Unit filename="Prestamos.h" />
+		<Unit filename="archivoLibros.h" />
+		<Unit filename="funcionesPantallasInteractivas.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="menuLibros.cpp" />
+		<Unit filename="menuPrincipal.cpp" />
+		<Unit filename="rlutil.h" />
+		<Unit filename="socio.cpp" />
+		<Unit filename="socio.h" />
+		<Unit filename="socioArchivo.cpp" />
+		<Unit filename="socioArchivo.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

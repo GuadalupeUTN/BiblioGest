@@ -1,5 +1,8 @@
+#include <iostream>
+using namespace std;
 #include "Libro.h"
 #include <string.h>
+
 
 Libro::Libro()
 {
@@ -60,4 +63,41 @@ void Libro::setCantiDisponible (int cantDisponible)
 {
     _cantDisponible= cantDisponible;
 }
+void Libro::cargarLibro()
+{
+    cout << "PORFAVOR ESCRIBA LOS SIGUIENTES DATOS DEL LIBRO QUE DESEA:"<< endl;
+    cout << "ISBN:";
+    cin.getline(_ISBN, 13);
+    cout << endl;
+    cout << "TITULO:";
+    cin.getline(_titulo, 50);
+    cout << endl;
+    cout << "AUTOR:";
+    cin.getline(_autor, 50);
+    cout << endl;
+    cout << "FECHA DE PUBLICACION:";
+    this ->_fechaPubli.cargar();
+    cout << endl;
+    cout << "CANTIDAD DISPONIBLE:";
+    cin >> _cantDisponible;
+    cout << endl;
+};
+void Libro::mostrarLibro()
+{
+
+    cout << "ISBN:"<< _ISBN << endl;
+
+    cout << "TITULO:" << _titulo << endl;
+
+    cout << "AUTOR:"<< _autor << endl;
+
+    cout << "FECHA DE PUBLICACION:"<< _fechaPubli<< endl;
+
+    cout << "CANTIDAD DISPONIBLE:" << _cantDisponible << endl;
+
+};
+void Libro::editarLibro() {
+cout << "Editar libro esta en proceso"<<endl;};
+void Libro::disponibilidadLibro() {
+cout << "Disponibilidad libro esta en proceso"<<endl;};
 
