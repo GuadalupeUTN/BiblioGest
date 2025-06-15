@@ -12,7 +12,6 @@ private:
     char telefono[20];
     char direccion[50];
     char email[40];
-    bool estado;
     Fecha fechaNacimiento;
 
 public:
@@ -26,7 +25,6 @@ public:
     void setTelefono(const char*);
     void setDireccion(const char*);
     void setEmail(const char*);
-    void setEstado(bool);
     void setFechaNacimiento(Fecha);
 
     int getNumeroSocio();
@@ -36,7 +34,6 @@ public:
     const char* getTelefono();
     const char* getDireccion();
     const char* getEmail();
-    bool getEstado();
     Fecha getFechaNacimiento();
 };
 

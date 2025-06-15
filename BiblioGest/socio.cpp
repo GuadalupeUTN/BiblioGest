@@ -27,8 +27,6 @@ void Socio::cargar() {
     cout << "EMAIL: ";
     cin.getline(email, 40);
 
-    estado = true;
-
     cout << "FECHA DE NACIMIENTO: " << endl;
     fechaNacimiento.cargar();
 }
@@ -53,7 +51,6 @@ void Socio::setApellido(const char* a) { strcpy(apellido, a); }
 void Socio::setTelefono(const char* t) { strcpy(telefono, t); }
 void Socio::setDireccion(const char* d) { strcpy(direccion, d); }
 void Socio::setEmail(const char* e) { strcpy(email, e); }
-void Socio::setEstado(bool e) { estado = e; }
 void Socio::setFechaNacimiento(Fecha f) { fechaNacimiento = f; }
 
 // Getters
@@ -64,5 +61,4 @@ const char* Socio::getApellido() { return apellido; }
 const char* Socio::getTelefono() { return telefono; }
 const char* Socio::getDireccion() { return direccion; }
 const char* Socio::getEmail() { return email; }
-bool Socio::getEstado() {return estado; }
 Fecha Socio::getFechaNacimiento() { return fechaNacimiento; }

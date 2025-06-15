@@ -3,4 +3,3 @@
 
 void mostrarMenuPrincipal();
 void mostrarMenuLibros();
-void mostrarMenuSocio();
