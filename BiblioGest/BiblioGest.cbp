@@ -24,6 +24,19 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+<<<<<<< Updated upstream
+=======
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="menuLibros.cpp" />
+		<Unit filename="menuPrincipal.cpp" />
+		<Unit filename="menuSocio.cpp" />
+		<Unit filename="rlutil.h" />
+		<Unit filename="socio.cpp" />
+		<Unit filename="socio.h" />
+		<Unit filename="socioArchivo.cpp" />
+		<Unit filename="socioArchivo.h" />
+>>>>>>> Stashed changes
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

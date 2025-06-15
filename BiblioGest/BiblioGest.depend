@@ -1,48 +1,191 @@
 # depslib dependency file v1.0
-1749510082 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\fecha.cpp
+1749774169 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\fecha.cpp
 	"Fecha.h"
 	<iostream>
 
-1749510043 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\fecha.h
+1749774169 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\fecha.h
 	<string>
 
-1749509681 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\main.cpp
+1749774169 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\main.cpp
 	<iostream>
 	"Libro.h"
 	"Fecha.h"
 	"menu.h"
 	"funcionesPantallasInteractivas.h"
 
-1749422070 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\libro.h
+1749774169 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\libro.h
 	"Fecha.h"
 
-1749413899 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menu.h
+1749951587 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menu.h
 
-1749422070 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\funcionespantallasinteractivas.h
+1749950939 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\funcionespantallasinteractivas.h
 
-1749416378 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menu.cpp
+1749954014 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menu.cpp
 	<iostream>
 	<cstring>
 	"Menu.h"
 	"Socio.h"
 	"SocioArchivo.h"
 
-1749412472 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socio.h
+1749961971 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socio.h
 	"Fecha.h"
 
-1749413930 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socioarchivo.h
+1749962344 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socioarchivo.h
 	"Socio.h"
 
-1749413920 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socioarchivo.cpp
+1749962736 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socioarchivo.cpp
 	<cstdio>
 	"SocioArchivo.h"
 
-1749509982 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\libro.cpp
+1749950969 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\libro.cpp
+	<iostream>
 	"Libro.h"
 	<string.h>
 
-1749402610 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socio.cpp
+1749962163 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\socio.cpp
 	<cstring>
 	<iostream>
 	"Socio.h"
 
+<<<<<<< Updated upstream
+=======
+1749586661 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\main.cpp
+	<iostream>
+	"Libro.h"
+	"Fecha.h"
+	"menu.h"
+	"funcionesPantallasInteractivas.h"
+
+1749511524 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.h
+	"Fecha.h"
+
+1749520457 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\fecha.h
+	<string>
+
+1749510362 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menu.h
+
+1749510362 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\funcionespantallasinteractivas.h
+
+1749520435 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1749520370 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
+	<iostream>
+	"Libro.h"
+	<string.h>
+
+1749510900 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menu.cpp
+	<iostream>
+	<cstring>
+	"Menu.h"
+	"Socio.h"
+	"SocioArchivo.h"
+
+1749510362 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socio.h
+	"Fecha.h"
+
+1749510362 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socioarchivo.h
+	"Socio.h"
+
+1749510362 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socio.cpp
+	<cstring>
+	<iostream>
+	"Socio.h"
+
+1749510362 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socioarchivo.cpp
+	<cstdio>
+	"SocioArchivo.h"
+
+1749734780 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menuprincipal.cpp
+	<iostream>
+	"funcionesPantallasInteractivas.h"
+	"rlutil.h"
+
+1749510810 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.cpp
+	<iostream>
+	"archivoLibros.h"
+
+1749510832 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.h
+	<string>
+	"Libro.h"
+
+1749510861 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menulibros.cpp
+	<iostream>
+	"funcionesPantallasInteractivas.h"
+	"Libro.h"
+	"archivoLibros.h"
+
+1749565243 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\prestamos.cpp
+	<iostream>
+	"Prestamos.h"
+	"Fecha.h"
+	"socio.h"
+
+1749520266 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\prestamos.h
+	"Fecha.h"
+
+1749585755 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1749774169 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\archivolibros.cpp
+	<iostream>
+	"archivoLibros.h"
+
+1749774169 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\archivolibros.h
+	<string>
+	"Libro.h"
+
+1749950974 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menulibros.cpp
+	<iostream>
+	"funcionesPantallasInteractivas.h"
+	"Libro.h"
+	"archivoLibros.h"
+
+1749951587 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menuprincipal.cpp
+	<iostream>
+	"rlutil.h"
+	"funcionesPantallasInteractivas.h"
+	"menu.h"
+
+1749774169 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1749962010 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\prestamos.cpp
+	<iostream>
+	"Prestamos.h"
+	"Fecha.h"
+	"socio.h"
+
+1749774169 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\prestamos.h
+	"Fecha.h"
+
+1749963753 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\repos\bibliogest\bibliogest\menusocio.cpp
+	<iostream>
+	"funcionesPantallasInteractivas.h"
+	"socio.h"
+	"socioArchivo.h"
+
+>>>>>>> Stashed changes
