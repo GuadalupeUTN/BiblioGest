@@ -53,7 +53,8 @@ void mostrarMenuPrincipal()
         case 2:
         {
             rlutil::cls();
-            mostrarMenuSocio();
+            Menu _menu;
+            _menu.ejecutar();
         }
         break;
         case 3:
