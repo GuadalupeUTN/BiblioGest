@@ -23,6 +23,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+<<<<<<< Updated upstream
+=======
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="Libro.cpp" />
+		<Unit filename="Libro.h" />
+		<Unit filename="Prestamos.cpp" />
+		<Unit filename="funcionesPantallasInteractivas.h" />
+>>>>>>> Stashed changes
 		<Unit filename="main.cpp" />
 <<<<<<< Updated upstream
 =======
@@ -36,6 +45,10 @@
 		<Unit filename="socio.h" />
 		<Unit filename="socioArchivo.cpp" />
 		<Unit filename="socioArchivo.h" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+		<Unit filename="socios.dat" />
 >>>>>>> Stashed changes
 		<Extensions>
 			<lib_finder disable_auto="1" />
