@@ -26,5 +26,10 @@ public:
     void setFecha (Fecha fechaPubli);
     void setCantiDisponible (int cantDisponible);
 
+    void cargarLibro();
+    void mostrarLibro();
+    void editarLibro();
+    void disponibilidadLibro();
+
 };
 

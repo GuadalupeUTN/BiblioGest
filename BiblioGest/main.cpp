@@ -7,8 +7,10 @@ using namespace std;
 #include "funcionesPantallasInteractivas.h"
 int main()
 {
-    Menu _menu;
+    //Menu _menu;
 
-    _menu.ejecutar();
+    //_menu.ejecutar();
+
+    mostrarMenuPrincipal();
     return 0;
 }

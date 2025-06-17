@@ -1,5 +1,8 @@
+#include <iostream>
+using namespace std;
 #include "Libro.h"
 #include <string.h>
+
 
 Libro::Libro()
 {
@@ -60,8 +63,6 @@ void Libro::setCantiDisponible (int cantDisponible)
 {
     _cantDisponible= cantDisponible;
 }
-<<<<<<< Updated upstream
-=======
 void Libro::cargarLibro()
 {
     cout << "PORFAVOR ESCRIBA LOS SIGUIENTES DATOS DEL LIBRO QUE DESEA:"<< endl;
@@ -80,7 +81,7 @@ void Libro::cargarLibro()
     cout << "CANTIDAD DISPONIBLE:";
     cin >> _cantDisponible;
     cout << endl;
-}
+};
 void Libro::mostrarLibro()
 {
 
@@ -90,14 +91,13 @@ void Libro::mostrarLibro()
 
     cout << "AUTOR:"<< _autor << endl;
 
-    cout << "FECHA DE PUBLICACION:"<< /*_fechaPubli<< */endl;
+    cout << "FECHA DE PUBLICACION:"<< _fechaPubli<< endl;
 
     cout << "CANTIDAD DISPONIBLE:" << _cantDisponible << endl;
 
-}
+};
 void Libro::editarLibro() {
-cout << "Editar libro esta en proceso"<<endl;}
+cout << "Editar libro esta en proceso"<<endl;};
 void Libro::disponibilidadLibro() {
-cout << "Disponibilidad libro esta en proceso"<<endl;}
->>>>>>> Stashed changes
+cout << "Disponibilidad libro esta en proceso"<<endl;};
 
