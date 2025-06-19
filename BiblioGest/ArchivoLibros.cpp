@@ -4,41 +4,75 @@ using namespace std;
 
 #include "archivoLibros.h"
 
-//ArchivoLibros::ArchivoLibros(std::string _nombreArchivo)
-//{
-    //_nombreArchivo=nombreArchivo;
-//};
-
-/*/bool ArchivoLibros::agregarRegistroLibro(Libro objlibro)
+LibroArchivo::LibroArchivo()
 {
-    FILE *pArchivo = fopen(_nombreArchivo.c_str(), "ab");
-    if(pArchivo == NULL){
-        cout <<"ARCHIVO VACIO"<<endl;
-        return false;
+    nombreArchivo="libros.dat";
+};
+
+Libro LibroArchivo::leer(int pos)
+{
+    Libro reg;
+    FILE* p = fopen(nombreArchivo, "rb");
+    if (p == NULL) return reg;
+
+    fseek(p, sizeof(Libro) * pos, SEEK_SET);
+    fread(&reg, sizeof(Libro), 1, p);
+    fclose(p);
+    return reg;
+};
+bool LibroArchivo::guardar(Libro reg)
+{
+    FILE* p = fopen(nombreArchivo, "ab");
+    if (p == NULL) return false;
+
+    bool exito = fwrite(&reg, sizeof(Libro), 1, p);
+    fclose(p);
+    return exito;
+};
+
+bool LibroArchivo::guardar(Libro reg, int pos)
+{
+    FILE* p = fopen(nombreArchivo, "rb+");
+    if (p == NULL) return false;
+
+    fseek(p, sizeof(Libro) * pos, SEEK_SET);
+    bool exito = fwrite(&reg, sizeof(Libro), 1, p);
+    fclose(p);
+    return exito;
+};
+
+int LibroArchivo::contarRegistros()
+{
+    FILE* p = fopen(nombreArchivo, "rb");
+    if (p == NULL) return 0;
+
+    fseek(p, 0, SEEK_END);
+    int tam = ftell(p);
+    fclose(p);
+    return tam / sizeof(Libro);
+};
+
+int LibroArchivo::buscarISBN(char _ISBN[13])
+{
+    Libro reg;
+    int posicion = 0;
+    FILE* p = fopen(nombreArchivo, "rb");
+
+    if (p == nullptr)
+    {
+        return -2;
     }
-    bool ok = fwrite(&objlibro, sizeof(Libro), 1, pArchivo);
-    fclose(pArchivo);
-    return ok;
-};
 
-Libro ArchivoLibros::leerRegistroLibro(int pos){
-    FILE *pArchivo = fopen(_nombreArchivo.c_str(), "rb");
-    if(pArchivo == NULL){
-            cout<<"FALLA AL LEER ARCHIVO"<<endl;
-        return Libro();
+    while(fread(&reg, sizeof(Libro), 1, p) == 1)
+    {
+        if (reg.getISBN() == _ISBN)
+        {
+            fclose(p);
+            return posicion;
+        }
+        posicion++;
     }
-    Libro objlibro;
-    fseek(pArchivo, sizeof(Libro) * pos, SEEK_SET);
-    fread(&objlibro, sizeof(Libro), 1, pArchivo);
-    fclose(pArchivo);
-    return objlibro;
-};
 
-void ArchivoLibros::mostrarBiblioteca()
-{
+    fclose(p);
+    return -1;
 };
-int ArchivoLibros::cuentaLibrosRegistrados()
-{
-};*/
-
-//int buscarRegistroLibroPorISBN(const char* _ISBN);

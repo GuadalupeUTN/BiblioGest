@@ -1,5 +1,6 @@
 #pragma once
 #include "Fecha.h"
+#include "Generos.h"
 
 class Libro
 {

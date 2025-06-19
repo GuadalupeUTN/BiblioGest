@@ -4,6 +4,8 @@ using namespace std;
 #include "Libro.h"
 #include "Fecha.h"
 #include "menu.h"
+#include "Generos.h"
+#include "Autores.h"
 #include "funcionesPantallasInteractivas.h"
 int main()
 {
@@ -11,6 +13,7 @@ int main()
 
     //_menu.ejecutar();
 
-    mostrarMenuPrincipal();
+   // mostrarMenuPrincipal();
+
     return 0;
 }

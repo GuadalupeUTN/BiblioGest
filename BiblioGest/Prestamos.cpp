@@ -4,6 +4,8 @@ using namespace std;
 #include "Fecha.h"
 #include "socio.h"
 
+//FALTA ESTADOS
+
 Prestamos::Prestamos(){
 _IDPrestamos=0;
 //IDSocio
@@ -19,6 +21,8 @@ _fechaDevolucion=fechaDevolucion;
 //IDSocio
 //ISBN
 };
+
+//MEDTODO OBTENER PROX ID-AUTOINCREMENTABLE
 
 int Prestamos::getIDPrestamos(){
 return _IDPrestamos;

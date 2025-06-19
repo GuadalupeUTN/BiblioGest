@@ -4,11 +4,12 @@ using namespace std;
 #include "funcionesPantallasInteractivas.h"
 #include "Libro.h"
 #include "archivoLibros.h"
-
+#include <cstring>
 void mostrarMenuLibros()
 {
     int op;
     Libro milibro;
+    LibroArchivo archivo;
     do
     {
 
@@ -17,6 +18,7 @@ void mostrarMenuLibros()
         cout<<"2-Mostrar libro"<<endl;
         cout<<"3-Editar libro"<<endl;
         cout<<"4-Disponibilidad"<<endl;
+        cout<<"5-Buscar por ISBN"<<endl;
         cout <<"0-Salir"<<endl;
 
         cin >> op;
@@ -25,23 +27,24 @@ void mostrarMenuLibros()
         switch(op)
         {
         case 1:
+        {
             cout<<endl;
             milibro.cargarLibro();
-          /* ArchivoLibros archi("arhcivoLibros.dat");
-
-            if (archi.agregarRegistroLibro(milibro))
+            if(archivo.guardar(milibro))
             {
-                cout << "Libro guardado correctamente." << endl;
+                cout << "Libro guardado exitosamente." << endl;
             }
             else
+            {
+                cout << "Error al guardar el libro." << endl;
+            }
+        }
 
-                cout << "Error al guardar el libro." << endl;*/
-
-            break;
+        break;
         case 2:
             cout<<endl;
-         //  milibro = archi.leerRegistroLibro(0);
             milibro.mostrarLibro();
+
             break;
         case 3:
             cout<<endl;
@@ -52,12 +55,43 @@ void mostrarMenuLibros()
             cout<<endl;
             milibro.disponibilidadLibro();
             break;
+        case 5:
+           /* cout<<endl;
+            char isbn[13];
+            cout << "PORFAVOR INGRESE EL CODIGO ISBN: ";
+            cin >> isbn;
+            if (isbn>13)
+            {
+                cout << "CODIGO NO VALIDO-MAXIMO 13 CARACTERES" << endl;
+            }
+
+            int total = archivo.contarRegistros();
+            bool encontrado = false;
+
+            for (int i=0; i<total; i++)
+            {
+                milibro = archivo.leer(i);
+                if (strcmp(milibro.getISBN(), isbn.c_str()) == 0)
+                {
+                    cout << "LIBRO ENCONTRADO:" << endl;
+                    milibro.mostrarLibro();
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado)
+            {
+                cout << "Lo sentimos, no se encontró ningun libro con ese ISBN." << endl;
+            }*/
+            break;
         case 0:
             op=0;
             break;
         }
-    }while(op>0);
+    }
+    while(op>0);
+}
 
-};
 
 
