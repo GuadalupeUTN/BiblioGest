@@ -155,3 +155,15 @@
 	<cstring>
 	"Autores.h"
 
+1750335335 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivoautores.cpp
+	<iostream>
+
+1750349288 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivogeneros.cpp
+	<iostream>
+	"Generos.h"
+	"ArchivoGeneros.h"
+
+1750335201 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivogeneros.h
+	<string>
+	"Generos.h"
+
