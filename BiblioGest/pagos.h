@@ -1,14 +1,9 @@
 #ifndef PAGOS_H_INCLUDED
 #define PAGOS_H_INCLUDED
-
-public class Pagos
-{
-    #ifndef PAGO_H
-#define PAGO_H
-
 #include "Fecha.h"
+#include "socio.h"
 
-class Pago {
+class Pagos {
 private:
     int numeroSocio;
     Fecha fechaPago;
@@ -32,10 +27,9 @@ public:
     int getMesPago();
     int getAnioPago();
     bool getEstado();
+
+    void cargarPago(Socio socio);
+    void mostrar();
 };
 
 #endif // PAGO_H
-
-
-
-#endif // PAGOS_H_INCLUDED

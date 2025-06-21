@@ -209,16 +209,15 @@
 	"Libro.h"
 	<string.h>
 
-1750134055 source:c:\users\flore\downloads\bibliogest\bibliogest\main.cpp
+1750460546 source:c:\users\flore\downloads\bibliogest\bibliogest\main.cpp
 	<iostream>
 	"Libro.h"
 	"Fecha.h"
-	"menu.h"
 	"funcionesPantallasInteractivas.h"
 
 1749964760 c:\users\flore\downloads\bibliogest\bibliogest\menu.h
 
-1749964058 c:\users\flore\downloads\bibliogest\bibliogest\funcionespantallasinteractivas.h
+1750460644 c:\users\flore\downloads\bibliogest\bibliogest\funcionespantallasinteractivas.h
 
 1749964760 source:c:\users\flore\downloads\bibliogest\bibliogest\menu.cpp
 	<iostream>
@@ -233,17 +232,16 @@
 1750133834 c:\users\flore\downloads\bibliogest\bibliogest\socioarchivo.h
 	"Socio.h"
 
-1749964760 source:c:\users\flore\downloads\bibliogest\bibliogest\menulibros.cpp
+1750460552 source:c:\users\flore\downloads\bibliogest\bibliogest\menulibros.cpp
 	<iostream>
 	"funcionesPantallasInteractivas.h"
 	"Libro.h"
 	"archivoLibros.h"
 
-1749965956 source:c:\users\flore\downloads\bibliogest\bibliogest\menuprincipal.cpp
+1750460654 source:c:\users\flore\downloads\bibliogest\bibliogest\menuprincipal.cpp
 	<iostream>
 	"rlutil.h"
 	"funcionesPantallasInteractivas.h"
-	"menu.h"
 
 1749964760 c:\users\flore\downloads\bibliogest\bibliogest\rlutil.h
 	<iostream>
@@ -259,11 +257,14 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1749964058 source:c:\users\flore\downloads\bibliogest\bibliogest\menusocio.cpp
+1750462154 source:c:\users\flore\downloads\bibliogest\bibliogest\menusocio.cpp
 	<iostream>
 	"funcionesPantallasInteractivas.h"
 	"socio.h"
 	"socioArchivo.h"
+	"pagos.h"
+	"pagosArchivo.h"
+	<cstring>
 
 1750133890 source:c:\users\flore\downloads\bibliogest\bibliogest\prestamos.cpp
 	<iostream>
@@ -279,7 +280,23 @@
 	<iostream>
 	"Socio.h"
 
-1749964058 source:c:\users\flore\downloads\bibliogest\bibliogest\socioarchivo.cpp
+1750213169 source:c:\users\flore\downloads\bibliogest\bibliogest\socioarchivo.cpp
 	<cstdio>
 	"SocioArchivo.h"
+
+1750210811 source:c:\users\flore\downloads\bibliogest\bibliogest\pagos.cpp
+	<iostream>
+	"Pagos.h"
+	"Socio.h"
+
+1750210831 c:\users\flore\downloads\bibliogest\bibliogest\pagos.h
+	"Fecha.h"
+	"socio.h"
+
+1750214660 source:c:\users\flore\downloads\bibliogest\bibliogest\pagosarchivo.cpp
+	<cstdio>
+	"pagosArchivo.h"
+
+1750214573 c:\users\flore\downloads\bibliogest\bibliogest\pagosarchivo.h
+	"pagos.h"
 

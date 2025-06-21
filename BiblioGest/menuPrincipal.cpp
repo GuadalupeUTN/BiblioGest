@@ -3,7 +3,6 @@
 
 using namespace std;
 #include "funcionesPantallasInteractivas.h"
-#include "menu.h"
 
 void mostrarMenuPrincipal()
 {
@@ -53,7 +52,7 @@ void mostrarMenuPrincipal()
         case 2:
         {
             rlutil::cls();
-            mostrarMenuPrincipal();
+            mostrarMenuSocio();
         }
         break;
         case 3:
