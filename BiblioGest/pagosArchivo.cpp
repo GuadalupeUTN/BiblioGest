@@ -40,3 +40,52 @@ int PagosArchivo::contarRegistros() {
     fclose(p);
     return tam / sizeof(Pagos);
 }
+bool PagosArchivo::eliminarFisicamente(int numeroSocio) {
+    FILE* original = fopen(nombreArchivo, "rb");
+    if (original == nullptr) return false;
+
+    FILE* temp = fopen("pagos_temp.dat", "wb");
+    if (temp == nullptr) {
+        fclose(original);
+        return false;
+    }
+
+    Pagos p;
+    bool eliminado = false;
+
+    while (fread(&p, sizeof(Pagos), 1, original) == 1) {
+        if (p.getNumeroSocio() != numeroSocio) {
+            fwrite(&p, sizeof(Pagos), 1, temp);
+        } else {
+            eliminado = true;
+        }
+    }
+
+    fclose(original);
+    fclose(temp);
+
+    if (eliminado) {
+        remove(nombreArchivo);
+        rename("pagos_temp.dat", nombreArchivo);
+    } else {
+        remove("pagos_temp.dat");
+    }
+
+    return eliminado;
+}
+bool PagosArchivo::eliminarLogicamente(int numeroSocio) {
+    int total = contarRegistros();
+    bool eliminado = false;
+
+    for (int i = 0; i < total; i++) {
+        Pagos p = leer(i);
+        if (p.getNumeroSocio() == numeroSocio && p.getEstado()) {
+            p.setEstado(false);              // marcamos como inactivo
+            guardar(p, i);                   // sobrescribimos el registro
+            eliminado = true;
+        }
+    }
+
+    return eliminado;
+}
+

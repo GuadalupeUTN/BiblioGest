@@ -117,7 +117,7 @@ void mostrarMenuSocio()
             }
             break;
 
-        case 7:
+       /* case 7:
             cout << "Ingrese el numero de socio: ";
             cin >> nroSocio;
             {
@@ -150,12 +150,11 @@ void mostrarMenuSocio()
 
                 }
 
-            break;
-
-
-        /*default:
-            cout << "Opcion invalida." << endl;
             break;*/
+
+        default:
+            cout << "Opcion invalida." << endl;
+            break;
         }
 
         system("pause");

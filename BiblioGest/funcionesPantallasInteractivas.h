@@ -4,3 +4,4 @@
 void mostrarMenuPrincipal();
 void mostrarMenuLibros();
 void mostrarMenuSocio();
+void mostrarMenuPagos();
