@@ -23,9 +23,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoAutores.cpp" />
+		<Unit filename="ArchivoAutores.h" />
+		<Unit filename="ArchivoGeneros.cpp" />
+		<Unit filename="ArchivoGeneros.h" />
 		<Unit filename="ArchivoLibros.cpp" />
+		<Unit filename="Autores.cpp" />
+		<Unit filename="Autores.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
+		<Unit filename="Generos.cpp" />
+		<Unit filename="Generos.h" />
 		<Unit filename="Libro.cpp" />
 		<Unit filename="Libro.h" />
 		<Unit filename="Prestamos.cpp" />
