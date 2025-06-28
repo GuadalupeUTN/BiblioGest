@@ -13,4 +13,5 @@ public:
     bool guardar(Autores reg, int pos);
     int contarRegistros();
     int buscarAutor(int _IDAutor);
+    void leerTodos(int cantidadRegistros, Autores *vector);
 };

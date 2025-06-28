@@ -3,8 +3,14 @@
 using namespace std;
 
 #include "Generos.h"
+#include "ArchivoGeneros.h"
+
 int Generos::idAux = 1;
 
+void Generos::inicializarID(){
+GeneroArchivo arc;
+idAux=arc.contarRegistros()+1;
+};
 Generos::Generos()
 {
     _IDGenero=idAux++;

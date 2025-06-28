@@ -18,6 +18,8 @@ public:
     void setGenero(const char* genero);
     void setCantLibros(int cantLibros);
 
+    static void inicializarID();
+
     void cargarGenero();
     void mostrarGeneros();
 };

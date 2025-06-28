@@ -9,71 +9,90 @@ GeneroArchivo::GeneroArchivo()
     nombreArchivo="generos.dat";
 };
 
+
+bool GeneroArchivo::guardar(Generos g)
+{
+    FILE *pArchivo = fopen(nombreArchivo, "ab");
+    if (pArchivo == NULL) {
+            return false;}
+
+    bool ok = fwrite(&g, sizeof(Generos), 1, pArchivo);
+    fclose(pArchivo);
+    return ok;
+};
+
+bool GeneroArchivo::guardar(Generos g, int pos)
+{
+    FILE *pArchivo = fopen(nombreArchivo, "rb+");
+    if (pArchivo == NULL){
+            return false;}
+
+    fseek(pArchivo, sizeof(Generos) * pos, SEEK_SET);
+    bool ok = fwrite(&g, sizeof(Generos), 1, pArchivo);
+    fclose(pArchivo);
+    return ok;
+};
+
 Generos GeneroArchivo::leer(int pos)
 {
-    Generos reg;
-    FILE* p = fopen(nombreArchivo, "rb");
-    if (p == NULL) return reg;
 
-    fseek(p, sizeof(Generos) * pos, SEEK_SET);
-    fread(&reg, sizeof(Generos), 1, p);
-    fclose(p);
-    return reg;
-};
+    FILE *pArchivo = fopen(nombreArchivo, "rb");
+    if (pArchivo == NULL){
+        return Generos();
+    }
+    Generos g;
+    fseek(pArchivo, sizeof(Generos) * pos, SEEK_SET);
+fread(&g, sizeof(Generos), 1, pArchivo);
+    fclose(pArchivo);
+    return g;
 
-bool GeneroArchivo::guardar(Generos reg)
-{
-    FILE* p = fopen(nombreArchivo, "ab");
-    if (p == NULL) return false;
-
-    bool exito = fwrite(&reg, sizeof(Generos), 1, p);
-    fclose(p);
-    return exito;
-};
-
-bool GeneroArchivo::guardar(Generos reg, int pos)
-{
-    FILE* p = fopen(nombreArchivo, "rb+");
-    if (p == NULL) return false;
-
-    fseek(p, sizeof(Generos) * pos, SEEK_SET);
-    bool exito = fwrite(&reg, sizeof(Generos), 1, p);
-    fclose(p);
-    return exito;
 };
 
 int GeneroArchivo::contarRegistros()
 {
-    FILE* p = fopen(nombreArchivo, "rb");
-    if (p == NULL) return 0;
+    FILE *pArchivo = fopen(nombreArchivo, "rb");
+    if (pArchivo == NULL) {
+            return 0;}
 
-    fseek(p, 0, SEEK_END);
-    int tam = ftell(p);
-    fclose(p);
-    return tam / sizeof(Generos);
+    fseek(pArchivo, 0, SEEK_END);
+    int cantidadRegistros = ftell(pArchivo) / sizeof(Generos);
+    fclose(pArchivo);
+    return cantidadRegistros;
 };
+
+void GeneroArchivo::leerTodos(int cantidadRegistros, Generos *vector){
+    FILE *pArchivo = fopen(nombreArchivo, "rb");
+    if(pArchivo == NULL){
+        return;
+    }
+    for(int i = 0; i < cantidadRegistros; i++){
+        fread(&vector[i], sizeof(Generos), 1, pArchivo);
+    }
+    fclose(pArchivo);
+}
 
 int GeneroArchivo::buscarGenero(int _IDGenero)
 {
-    Generos reg;
-    int posicion = 0;
-    FILE* p = fopen(nombreArchivo, "rb");
+    FILE* pArchivo = fopen(nombreArchivo, "rb");
 
-    if (p == nullptr)
+    if (pArchivo == NULL)
     {
-        return -2;
+        return -1;
     }
 
-    while(fread(&reg, sizeof(Generos), 1, p) == 1)
+    Generos g;
+    int posicion = 0;
+    while(fread(&g, sizeof(Generos), 1, pArchivo))
     {
-        if (reg.getIDGenero() == _IDGenero)
+        if (g.getIDGenero() == _IDGenero)
         {
-            fclose(p);
+            fclose(pArchivo);
             return posicion;
         }
         posicion++;
     }
 
-    fclose(p);
+    fclose(pArchivo);
     return -1;
 };
+

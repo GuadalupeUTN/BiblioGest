@@ -4,7 +4,13 @@
 using namespace std;
 
 #include "Autores.h"
+#include "ArchivoAutores.h"
 int Autores::idAux=1;
+
+void Autores::inicializarID(){
+AutoresArchivo arc;
+idAux=arc.contarRegistros()+1;
+};
 
 Autores::Autores(){
 _IDAutor=idAux++;

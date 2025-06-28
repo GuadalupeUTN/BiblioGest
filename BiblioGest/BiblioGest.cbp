@@ -23,13 +23,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoAutores.cpp" />
+		<Unit filename="ArchivoAutores.h" />
+		<Unit filename="ArchivoGeneros.cpp" />
+		<Unit filename="ArchivoGeneros.h" />
 		<Unit filename="ArchivoLibros.cpp" />
-		<Unit filename="Autores.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="Autores.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="Autores.cpp" />
+		<Unit filename="Autores.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
 		<Unit filename="Generos.cpp" />

@@ -9,8 +9,9 @@ private:
 public:
     GeneroArchivo();
     Generos leer(int pos);
-    bool guardar(Generos reg);
-    bool guardar(Generos reg, int pos);
+    bool guardar(Generos g);
+    bool guardar(Generos g, int pos);
     int contarRegistros();
     int buscarGenero(int _IDGenero);
+    void leerTodos(int cantidadRegistros, Generos *vector);
 };

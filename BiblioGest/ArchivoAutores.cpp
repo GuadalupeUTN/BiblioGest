@@ -8,6 +8,27 @@ AutoresArchivo::AutoresArchivo()
     nombreArchivo="autores.dat";
 };
 
+bool AutoresArchivo::guardar(Autores a){
+    FILE *pArchivo = fopen(nombreArchivo, "ab");
+    if (pArchivo == NULL) {
+            return false;}
+
+    bool ok = fwrite(&a, sizeof(Autores), 1, pArchivo);
+    fclose(pArchivo);
+    return ok;
+};
+
+bool AutoresArchivo::guardar(Autores a, int pos){
+    FILE *pArchivo = fopen(nombreArchivo, "rb+");
+    if (pArchivo == NULL){
+            return false;}
+
+    fseek(pArchivo, sizeof(Autores) * pos, SEEK_SET);
+    bool ok = fwrite(&a, sizeof(Autores), 1, pArchivo);
+    fclose(pArchivo);
+    return ok;
+};
+
 Autores AutoresArchivo::leer(int pos)
 {
     Autores reg;
@@ -20,53 +41,50 @@ Autores AutoresArchivo::leer(int pos)
     return reg;
 };
 
-bool AutoresArchivo::guardar(Autores reg){
-    FILE* p = fopen(nombreArchivo, "ab");
-    if (p == NULL) return false;
-
-    bool exito = fwrite(&reg, sizeof(Autores), 1, p);
-    fclose(p);
-    return exito;
-};
-bool AutoresArchivo::guardar(Autores reg, int pos){
-    FILE* p = fopen(nombreArchivo, "rb+");
-    if (p == NULL) return false;
-
-    fseek(p, sizeof(Autores) * pos, SEEK_SET);
-    bool exito = fwrite(&reg, sizeof(Autores), 1, p);
-    fclose(p);
-    return exito;
-};
 int AutoresArchivo::contarRegistros(){
-    FILE* p = fopen(nombreArchivo, "rb");
-    if (p == NULL) return 0;
+    FILE *pArchivo = fopen(nombreArchivo, "rb");
+    if (pArchivo == NULL) {
+            return 0;}
 
-    fseek(p, 0, SEEK_END);
-    int tam = ftell(p);
-    fclose(p);
-    return tam / sizeof(Autores);
+    fseek(pArchivo, 0, SEEK_END);
+    int cantidadRegistros = ftell(pArchivo) / sizeof(Autores);
+    fclose(pArchivo);
+    return cantidadRegistros;
 };
-int AutoresArchivo::buscarAutor(int _IDAutor){
-   Autores reg;
-    int posicion = 0;
-    FILE* p = fopen(nombreArchivo, "rb");
 
-    if (p == nullptr)
+void AutoresArchivo::leerTodos(int cantidadRegistros, Autores *vector){
+    FILE *pArchivo = fopen(nombreArchivo, "rb");
+    if(pArchivo == NULL){
+        return;
+    }
+    for(int i = 0; i < cantidadRegistros; i++){
+        fread(&vector[i], sizeof(Autores), 1, pArchivo);
+    }
+    fclose(pArchivo);
+}
+
+
+int AutoresArchivo::buscarAutor(int _IDAutor){
+    FILE* pArchivo = fopen(nombreArchivo, "rb");
+
+    if (pArchivo == NULL)
     {
-        return -2;
+        return -1;
     }
 
-    while(fread(&reg, sizeof(Autores), 1, p) == 1)
+    Autores a;
+    int posicion = 0;
+    while(fread(&a, sizeof(Autores), 1, pArchivo))
     {
-        if (reg.getIDAutor() == _IDAutor)
+        if (a.getIDAutor() == _IDAutor)
         {
-            fclose(p);
+            fclose(pArchivo);
             return posicion;
         }
         posicion++;
     }
 
-    fclose(p);
+    fclose(pArchivo);
     return -1;
 };
 

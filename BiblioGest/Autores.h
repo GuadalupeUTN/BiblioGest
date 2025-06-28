@@ -18,6 +18,8 @@ public:
     void setAutor(const char* autor);
     void setCantObras(int cantObras);
 
+    static void inicializarID();
+
     void cargarAutor();
     void mostrarAutor();
 };

@@ -8,6 +8,8 @@ private:
     char _ISBN[13];
     char _titulo[50];
     char _autor[50];
+    //Autor _IDAutor;
+    //Genero _IDGenero;
     Fecha _fechaPubli;
     int _cantDisponible;
 
