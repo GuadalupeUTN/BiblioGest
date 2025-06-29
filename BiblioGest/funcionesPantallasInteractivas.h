@@ -4,4 +4,5 @@
 void mostrarMenuPrincipal(); //Lista la base
 void mostrarMenuLibros(); //Lista la base
 void mostrarMenuPrestamos(); //Falta todo
-
+void mostrarMenuSocio();
+void mostrarMenuPagos();

@@ -3,7 +3,6 @@
 
 using namespace std;
 #include "funcionesPantallasInteractivas.h"
-#include "menu.h"
 
 void mostrarMenuPrincipal()
 {
@@ -53,19 +52,17 @@ void mostrarMenuPrincipal()
         case 2:
         {
             rlutil::cls();
-            Menu _menu;
-            _menu.ejecutar();
+            //Menu _menu;
+            //_menu.ejecutar();
+            mostrarMenuSocio();
         }
         break;
         case 3:
         {
             rlutil::cls();
-            cout<< "ESTAMOS TRABAJANDO EN ESTA OPCION, REGRESE AL MENU PRINCIPAL CON CUALQUIER TECLA"<<endl;
-            int volver=rlutil::getkey();
-            if (volver==1)
-            {
-                mostrarMenuPrincipal();
-            }
+            //cout<< "ESTAMOS TRABAJANDO EN ESTA OPCION, REGRESE AL MENU PRINCIPAL CON CUALQUIER TECLA"<<endl;
+
+            mostrarMenuPagos();
         }
         break;
         case 4:
@@ -105,4 +102,4 @@ void mostrarMenuPrincipal()
     }
     while(seleccion>0);
 
-};
+}

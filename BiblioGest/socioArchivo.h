@@ -10,7 +10,8 @@ private:
 public:
     SocioArchivo();
     Socio leer(int pos);
-    bool guardar(Socio reg);
+    bool guardar(Socio& reg);
+
     bool guardar(Socio reg, int pos);
     int contarRegistros();
     int buscar(int nroSocio);

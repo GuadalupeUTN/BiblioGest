@@ -16,7 +16,7 @@ Socio SocioArchivo::leer(int pos) {
     fclose(p);
     return reg;
 }
-
+/*
 bool SocioArchivo::guardar(Socio reg) {
     FILE* p = fopen(nombreArchivo, "ab");
     if (p == NULL) return false;
@@ -24,7 +24,33 @@ bool SocioArchivo::guardar(Socio reg) {
     bool exito = fwrite(&reg, sizeof(Socio), 1, p);
     fclose(p);
     return exito;
+}*/
+
+bool SocioArchivo::guardar(Socio& reg) {
+    int total = contarRegistros();
+    int ultimoNumero = 0;
+
+    // Buscar el último número de socio activo
+    for (int i = total - 1; i >= 0; i--) {
+        Socio s = leer(i);
+        if (s.getEstado()) {
+            ultimoNumero = s.getNumeroSocio();
+            break;
+        }
+    }
+
+    // Asignar número de socio automáticamente
+    reg.setNumeroSocio(ultimoNumero + 1);
+
+    // Guardar el nuevo socio en el archivo
+    FILE* p = fopen(nombreArchivo, "ab");
+    if (p == nullptr) return false;
+
+    bool exito = fwrite(&reg, sizeof(Socio), 1, p);
+    fclose(p);
+    return exito;
 }
+
 
 bool SocioArchivo::guardar(Socio reg, int pos) {
     FILE* p = fopen(nombreArchivo, "rb+");

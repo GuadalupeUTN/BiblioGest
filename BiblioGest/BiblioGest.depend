@@ -176,3 +176,155 @@
 	<string>
 	"Autores.h"
 
+1751147483 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\archivoautores.cpp
+	<iostream>
+	"ArchivoAutores.h"
+
+1751147483 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\archivoautores.h
+	<string>
+	"Autores.h"
+
+1751147483 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\autores.h
+
+1751147483 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\archivogeneros.cpp
+	<iostream>
+	"Generos.h"
+	"ArchivoGeneros.h"
+
+1751147483 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\generos.h
+
+1751147483 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\archivogeneros.h
+	<string>
+	"Generos.h"
+
+1751149906 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\archivolibros.cpp
+	<iostream>
+	"archivoLibros.h"
+
+1751149906 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\archivolibros.h
+	<string>
+	"Libro.h"
+
+1751147483 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\libro.h
+	"Fecha.h"
+	"Generos.h"
+
+1751147083 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\fecha.h
+	<string>
+
+1751147483 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\autores.cpp
+	<iostream>
+	<cstring>
+	"Autores.h"
+	"ArchivoAutores.h"
+
+1751147083 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1751147483 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\generos.cpp
+	<iostream>
+	<string.h>
+	"Generos.h"
+	"ArchivoGeneros.h"
+
+1751147083 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\libro.cpp
+	<iostream>
+	"Libro.h"
+	<string.h>
+
+1751149906 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\prestamos.cpp
+	<iostream>
+	"Prestamos.h"
+	"Fecha.h"
+	"socio.h"
+
+1751147083 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\prestamos.h
+	"Fecha.h"
+
+1751149809 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\socio.h
+	"Fecha.h"
+
+1751156746 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\socio.cpp
+	<cstring>
+	<iostream>
+	"Socio.h"
+
+1751156991 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\socioarchivo.cpp
+	<cstdio>
+	"SocioArchivo.h"
+
+1751156969 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\socioarchivo.h
+	"Socio.h"
+
+1751149908 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menulibros.cpp
+	<iostream>
+	"funcionesPantallasInteractivas.h"
+	"Libro.h"
+	"archivoLibros.h"
+	<cstring>
+
+1751150916 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\funcionespantallasinteractivas.h
+
+1751149947 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\main.cpp
+	<iostream>
+	"Libro.h"
+	"Fecha.h"
+	"Generos.h"
+	"Autores.h"
+	"ArchivoGeneros.h"
+	"ArchivoAutores.h"
+	"funcionesPantallasInteractivas.h"
+
+1751157110 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menupagos.cpp
+	<iostream>
+	"pagos.h"
+	"pagosArchivo.h"
+	"socio.h"
+	"socioArchivo.h"
+	<cstring>
+
+1751149809 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagos.h
+	"Fecha.h"
+	"socio.h"
+
+1751149809 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagosarchivo.h
+	"pagos.h"
+
+1751151412 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menuprincipal.cpp
+	<iostream>
+	"rlutil.h"
+	"funcionesPantallasInteractivas.h"
+
+1751147083 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1751151275 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menusocio.cpp
+	<iostream>
+	"funcionesPantallasInteractivas.h"
+	"socio.h"
+	"socioArchivo.h"
+	"pagos.h"
+	"pagosArchivo.h"
+	<cstring>
+
+1751149809 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagos.cpp
+	<iostream>
+	"Pagos.h"
+	"Socio.h"
+
+1751149809 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagosarchivo.cpp
+	<cstdio>
+	"pagosArchivo.h"
+

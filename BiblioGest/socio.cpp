@@ -5,8 +5,6 @@ using namespace std;
 #include "Socio.h"
 
 void Socio::cargar() {
-    cout << "NUMERO DE SOCIO: ";
-    cin >> numeroSocio;
 
     cout << "DNI: ";
     cin >> dni;

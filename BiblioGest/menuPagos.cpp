@@ -15,6 +15,7 @@ void mostrarMenuPagos() {
         cout << "2. Listar pagos por numero de socio" << endl;
         cout << "3. Eliminar pago logicamente (por numero de socio)" << endl;
         cout << "4. Eliminar pago fisicamente (por numero de socio)" << endl;
+        cout << "5. Historial de pagos" << endl;
         cout << "0. Volver al menu principal" << endl;
 
         cin >> opcion;
@@ -85,6 +86,19 @@ void mostrarMenuPagos() {
             } else {
                 cout << "No se encontraron pagos para eliminar." << endl;
             }
+            break;
+        case 5:
+            {
+                PagosArchivo pagosArchivo;
+                int reg= pagosArchivo.contarRegistros();
+                for(int i = 0; i < reg; i++ )
+                {
+                    Pagos p = pagosArchivo.leer(i);
+                    p.mostrar();
+
+                }
+            }
+
             break;
 
         case 0:

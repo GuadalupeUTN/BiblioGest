@@ -20,8 +20,6 @@ void mostrarMenuSocio()
         cout << "4. Buscar Socio (numero de dni)" << endl;
         cout << "5. Eliminar Socio (numero de socio)" << endl;
         cout << "6. Eliminar Socio (numero de dni)" << endl;
-        cout << "7. Registrar pago" << endl;
-        cout << "8. Historico de pagos" <<endl;
         cout << "0. Salir" << endl;
 
         cin >> opcion;
