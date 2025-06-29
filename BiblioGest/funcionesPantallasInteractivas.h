@@ -6,3 +6,5 @@ void mostrarMenuLibros(); //Lista la base
 void mostrarMenuPrestamos(); //Falta todo
 void mostrarMenuSocio();
 void mostrarMenuPagos();
+bool validarDNI(const char* dni);
+void errorMessage(int error);

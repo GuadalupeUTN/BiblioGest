@@ -20,6 +20,7 @@ public:
     bool eliminarFisicamente(char dni[12]);
     bool eliminarLogicamente(int nroSocio);
     bool eliminarLogicamente(char dni[12]);
+    bool existeDni(const char* dni);
 };
 
 #endif // SOCIOARCHIVO_H

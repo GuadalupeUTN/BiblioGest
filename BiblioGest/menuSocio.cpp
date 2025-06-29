@@ -1,4 +1,5 @@
 #include <iostream>
+#include "rlutil.h"
 using namespace std;
 
 #include "funcionesPantallasInteractivas.h"
@@ -13,16 +14,40 @@ void mostrarMenuSocio()
     int opcion;
     do
     {
-        cout << "SOCIOS" << endl;
-        cout << "1. Registrar nuevo socio" << endl;
-        cout << "2. Listar todos los socios" << endl;
-        cout << "3. Buscar Socio (numero de socio)" << endl;
-        cout << "4. Buscar Socio (numero de dni)" << endl;
-        cout << "5. Eliminar Socio (numero de socio)" << endl;
-        cout << "6. Eliminar Socio (numero de dni)" << endl;
-        cout << "0. Salir" << endl;
+        rlutil::cls();
+        rlutil::hidecursor();
 
-        cin >> opcion;
+        // TÍTULO SUPERIOR
+        rlutil::setColor(rlutil::CYAN);
+        rlutil::locate(45, 3);
+        cout << "B I B L I O G E S T" << endl;
+
+        rlutil::setColor(rlutil::YELLOW);
+        rlutil::locate(38, 4);
+        cout << "S I S T E M A   D E   S O C I O S" << endl;
+
+        // MARCO
+        rlutil::setColor(rlutil::MAGENTA);
+        for (int i = 0; i < 50; i++) {
+            rlutil::locate(25 + i, 6); cout << char(205); // línea superior
+            rlutil::locate(25 + i, 18); cout << char(205); // línea inferior
+        }
+
+        // OPCIONES
+        rlutil::setColor(rlutil::WHITE);
+        rlutil::locate(35, 8);  cout << "1. Registrar nuevo socio";
+        rlutil::locate(35, 9);  cout << "2. Listar todos los socios";
+        rlutil::locate(35, 10); cout << "3. Buscar Socio (numero de socio)";
+        rlutil::locate(35, 11); cout << "4. Buscar Socio (numero de DNI)";
+        rlutil::locate(35, 12); cout << "5. Eliminar Socio (numero de socio)";
+        rlutil::locate(35, 13); cout << "6. Eliminar Socio (numero de DNI)";
+        rlutil::locate(35, 14); cout << "0. Volver al menu principal";
+
+        rlutil::setColor(rlutil::LIGHTGREEN);
+        rlutil::locate(35, 16); cout << "Seleccione una opcion: ";
+        rlutil::setColor(rlutil::WHITE);
+        rlutil::locate(60, 16); cin >> opcion;
+
         cin.ignore();
 
         SocioArchivo archivo;
@@ -34,128 +59,178 @@ void mostrarMenuSocio()
         switch (opcion)
         {
         case 0:
-            cout << "Saliendo del sistema..." << endl;
-            break;
+            return;
+
         case 1:
-            socio.cargar();
-            archivo.guardar(socio);
+        rlutil::cls();
+        rlutil::setColor(rlutil::CYAN);
+        cout << "================ REGISTRO DE NUEVO SOCIO ================" << endl;
+        rlutil::setColor(rlutil::WHITE);
+
+        socio.cargar();
+
+        if (archivo.existeDni(socio.getDni())) {
+            rlutil::setColor(rlutil::RED);
+            cout << "⚠  Ya existe un socio registrado con ese DNI." << endl;
             break;
+        }
+
+        archivo.guardar(socio);
+        rlutil::setColor(rlutil::GREEN);
+        cout << "✅ Socio registrado exitosamente." << endl;
+        break;
+
 
         case 2:
-            totalReg = archivo.contarRegistros();
-            for (int i = 0; i < totalReg; i++)
             {
-                Socio s = archivo.leer(i);
-                if (s.getEstado()) s.mostrar();
+                rlutil::cls();
+                rlutil::setColor(rlutil::CYAN);
+                cout << "================ LISTADO DE SOCIOS ================" << endl;
+                rlutil::setColor(rlutil::WHITE);
+
+                totalReg = archivo.contarRegistros();
+                bool hayActivos = false;
+                for (int i = 0; i < totalReg; i++) {
+                    Socio s = archivo.leer(i);
+                    if (s.getEstado()) {
+                        s.mostrar();
+                        hayActivos = true;
+                        cout << "--------------------------------------------------------" << endl;
+                    }
+                }
+                if (!hayActivos) {
+                    rlutil::setColor(rlutil::RED);
+                    cout << "⚠️  No hay socios activos cargados en el sistema." << endl;
+                }
             }
-            break;
+
+        break;
+
 
         case 3:
-            cout << "Ingrese el numero de socio: ";
-            cin >> nroSocio;
-            {
-                int pos = archivo.buscar(nroSocio);
-                if (pos >= 0)
-                {
-                    Socio s = archivo.leer(pos);
-                    s.mostrar();
-                }
-                else
-                {
-                    cout << "Socio no encontrado." << endl;
-                }
-            }
+        rlutil::cls();
+        rlutil::setColor(rlutil::CYAN);
+        cout << "=============== BUSCAR SOCIO POR NRO ===============" << endl;
+        rlutil::setColor(rlutil::WHITE);
+
+        cout << "Ingrese el numero de socio: ";
+        cin >> nroSocio;
+
+        if (cin.fail()) {
+            errorMessage(2);
+            cin.clear();
+            cin.ignore(1000, '\n');
             break;
+        }
+
+        {
+            int pos = archivo.buscar(nroSocio);
+            if (pos >= 0) {
+                Socio s = archivo.leer(pos);
+                s.mostrar();
+            } else {
+                rlutil::setColor(rlutil::RED);
+                cout << "⚠️  Socio no encontrado." << endl;
+            }
+        }
+        break;
 
         case 4:
-            cout << "Ingrese el DNI: ";
-            cin >> dni;
-            {
-                int total = archivo.contarRegistros();
-                bool encontrado = false;
-                for (int i = 0; i < total; i++)
-                {
-                    Socio s = archivo.leer(i);
-                    if (strcmp(s.getDni(), dni) == 0 && s.getEstado())
-                    {
-                        s.mostrar();
-                        encontrado = true;
-                        break;
-                    }
+        rlutil::cls();
+        rlutil::setColor(rlutil::CYAN);
+        cout << "=============== BUSCAR SOCIO POR DNI ===============" << endl;
+        rlutil::setColor(rlutil::WHITE);
+
+        cout << "Ingrese el DNI: ";
+        cin >> dni;
+
+        if (validarDNI(dni)) {
+            int total = archivo.contarRegistros();
+            bool encontrado = false;
+
+            for (int i = 0; i < total; i++) {
+                Socio s = archivo.leer(i);
+                if (strcmp(s.getDni(), dni) == 0 && s.getEstado()) {
+                    s.mostrar();
+                    encontrado = true;
+                    break;
                 }
-                if (!encontrado) cout << "Socio no encontrado." << endl;
             }
-            break;
+
+            if (!encontrado) {
+                rlutil::setColor(rlutil::RED);
+                cout << "⚠️  Socio no encontrado o no está activo." << endl;
+            }
+
+        } else {
+            errorMessage(1);
+        }
+        break;
+
 
         case 5:
-            cout << "Ingrese el numero de socio: ";
-            cin >> nroSocio;
-            archivo.eliminarLogicamente(nroSocio);
+        rlutil::cls();
+        rlutil::setColor(rlutil::CYAN);
+        cout << "=============== ELIMINAR SOCIO POR NRO ===============" << endl;
+        rlutil::setColor(rlutil::WHITE);
+
+        cout << "Ingrese el numero de socio: ";
+        cin >> nroSocio;
+
+        if (cin.fail()) {
+            errorMessage(2);
+            cin.clear();
+            cin.ignore(1000, '\n');
             break;
+        }
+
+        archivo.eliminarLogicamente(nroSocio);
+        rlutil::setColor(rlutil::GREEN);
+        cout << "✅ Socio eliminado logicamente del sistema." << endl;
+        break;
+
 
         case 6:
-            cout << "Ingrese el DNI: ";
-            cin >> dni;
-            {
-                int total = archivo.contarRegistros();
-                bool eliminado = false;
-                for (int i = 0; i < total; i++)
-                {
-                    Socio s = archivo.leer(i);
-                    if (strcmp(s.getDni(), dni) == 0 && s.getEstado())
-                    {
-                        s.setEstado(false);
-                        archivo.guardar(s, i);
-                        eliminado = true;
-                        cout << "Socio eliminado logicamente." << endl;
-                        break;
-                    }
-                }
-                if (!eliminado) cout << "Socio no encontrado o ya eliminado." << endl;
-            }
-            break;
+        rlutil::cls();
+        rlutil::setColor(rlutil::CYAN);
+        cout << "=============== ELIMINAR SOCIO POR DNI ===============" << endl;
+        rlutil::setColor(rlutil::WHITE);
 
-       /* case 7:
-            cout << "Ingrese el numero de socio: ";
-            cin >> nroSocio;
-            {
-                int pos = archivo.buscar(nroSocio);
-                if (pos >= 0)
-                {
-                    Socio socio = archivo.leer(pos);
-                    Pagos p;
-                    p.cargarPago(socio);
-                    p.mostrar();
+        cout << "Ingrese el DNI: ";
+        cin >> dni;
 
-                    PagosArchivo pagosArchivo;
-                    bool guardado = pagosArchivo.guardar(p);
-                    if(guardado) { cout<<"SE HA GUARDADO CORRECTAMENTE!";}
-                    else {"HUBO UN ERROR EN EL GUARDADO";}
-                }
-                else
-                {
-                    cout << "Socio no encontrado." << endl;
+        if (validarDNI(dni)) {
+            int total = archivo.contarRegistros();
+            bool eliminado = false;
+
+            for (int i = 0; i < total; i++) {
+                Socio s = archivo.leer(i);
+                if (strcmp(s.getDni(), dni) == 0 && s.getEstado()) {
+                    s.setEstado(false);
+                    archivo.guardar(s, i);
+                    eliminado = true;
+                    rlutil::setColor(rlutil::GREEN);
+                    cout << "✅ Socio eliminado logicamente." << endl;
+                    break;
                 }
             }
-            break;
-        case 8:
-                PagosArchivo pagosArchivo;
-                int reg= pagosArchivo.contarRegistros();
-                for(int i = 0; i < reg; i++ )
-                {
-                    Pagos p = pagosArchivo.leer(i);
-                    p.mostrar();
 
-                }
+            if (!eliminado) {
+                rlutil::setColor(rlutil::RED);
+                cout << "⚠️  Socio no encontrado o ya estaba eliminado." << endl;
+            }
 
-            break;*/
+        } else {
+            errorMessage(1);
+        }
+        break;
 
         default:
             cout << "Opcion invalida." << endl;
             break;
         }
 
-        system("pause");
+        rlutil::anykey();
         system("cls");
 
     } while (opcion != 0);

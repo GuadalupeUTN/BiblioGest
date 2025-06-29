@@ -1,12 +1,14 @@
 #include <cstdio>
 #include "SocioArchivo.h"
+#include <cstring>
 
 
 SocioArchivo::SocioArchivo(){
   nombreArchivo = "socios.dat";
 }
 
-Socio SocioArchivo::leer(int pos) {
+Socio SocioArchivo::leer(int pos)
+{
     Socio reg;
     FILE* p = fopen(nombreArchivo, "rb");
     if (p == NULL) return reg;
@@ -16,15 +18,6 @@ Socio SocioArchivo::leer(int pos) {
     fclose(p);
     return reg;
 }
-/*
-bool SocioArchivo::guardar(Socio reg) {
-    FILE* p = fopen(nombreArchivo, "ab");
-    if (p == NULL) return false;
-
-    bool exito = fwrite(&reg, sizeof(Socio), 1, p);
-    fclose(p);
-    return exito;
-}*/
 
 bool SocioArchivo::guardar(Socio& reg) {
     int total = contarRegistros();
@@ -193,3 +186,19 @@ bool SocioArchivo::eliminarLogicamente(char dni[12]) {
     }
     return false;
 }
+
+bool SocioArchivo::existeDni(const char* dni)
+{
+    int total = contarRegistros();
+
+    for (int i = 0; i < total; i++) {
+        Socio s = leer(i);
+
+        if (strcmp(s.getDni(), dni) == 0) {
+            return true;  // Existe y cumple el criterio
+        }
+    }
+
+    return false;  // No se encontró
+}
+
