@@ -250,7 +250,7 @@
 	<iostream>
 	"Socio.h"
 
-1751167409 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\socioarchivo.cpp
+1751215499 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\socioarchivo.cpp
 	<cstdio>
 	"SocioArchivo.h"
 	<cstring>
@@ -277,7 +277,7 @@
 	"ArchivoAutores.h"
 	"funcionesPantallasInteractivas.h"
 
-1751175143 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menupagos.cpp
+1751217340 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menupagos.cpp
 	<iostream>
 	"rlutil.h"
 	"pagos.h"
@@ -290,7 +290,7 @@
 	"Fecha.h"
 	"socio.h"
 
-1751149809 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagosarchivo.h
+1751215869 c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagosarchivo.h
 	"pagos.h"
 
 1751151412 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menuprincipal.cpp
@@ -312,7 +312,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1751174284 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menusocio.cpp
+1751216820 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\menusocio.cpp
 	<iostream>
 	"rlutil.h"
 	"funcionesPantallasInteractivas.h"
@@ -322,14 +322,15 @@
 	"pagosArchivo.h"
 	<cstring>
 
-1751149809 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagos.cpp
+1751215499 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagos.cpp
 	<iostream>
 	"Pagos.h"
 	"Socio.h"
 
-1751149809 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagosarchivo.cpp
+1751215863 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\pagosarchivo.cpp
 	<cstdio>
 	"pagosArchivo.h"
+	<ctime>
 
 1751166646 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\validaciones.cpp
 	<iostream>

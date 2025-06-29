@@ -1,5 +1,7 @@
 #include <cstdio>
 #include "pagosArchivo.h"
+#include <ctime>
+
 
 bool PagosArchivo::guardar(Pagos reg) {
     FILE* p = fopen(nombreArchivo, "ab");
@@ -73,6 +75,7 @@ bool PagosArchivo::eliminarFisicamente(int numeroSocio) {
 
     return eliminado;
 }
+
 bool PagosArchivo::eliminarLogicamente(int numeroSocio) {
     int total = contarRegistros();
     bool eliminado = false;
@@ -80,12 +83,69 @@ bool PagosArchivo::eliminarLogicamente(int numeroSocio) {
     for (int i = 0; i < total; i++) {
         Pagos p = leer(i);
         if (p.getNumeroSocio() == numeroSocio && p.getEstado()) {
-            p.setEstado(false);              // marcamos como inactivo
-            guardar(p, i);                   // sobrescribimos el registro
+            p.setEstado(false);
+            guardar(p, i);
             eliminado = true;
         }
     }
 
     return eliminado;
+}
+
+
+bool PagosArchivo::tieneDeuda(int numeroSocio)
+{
+
+    int totalPagos = contarRegistros();
+    if (totalPagos == 0) return true;
+
+    time_t t = time(nullptr);
+    tm* now = localtime(&t);
+    int anioActual = now->tm_year + 1900;
+    int mesActual = now->tm_mon + 1;
+
+    bool deuda = true;
+
+    for (int i = 0; i < totalPagos; i++) {
+        Pagos p = leer(i);
+        if (p.getNumeroSocio() != numeroSocio) continue;
+
+        int anio = p.getAnioPago();
+        int mes = p.getMesPago();
+
+        if(anio == anioActual && mes == mesActual)
+        {
+            deuda = true;
+        }
+    }
+
+    return deuda;
+}
+
+bool PagosArchivo::tieneDeudaPorFecha(int numeroSocio, int _mes, int _anio)
+{
+
+    int totalPagos = contarRegistros();
+    if (totalPagos == 0) return true;
+
+    time_t t = time(nullptr);
+    tm* now = localtime(&t);
+
+    bool deuda = true;
+
+    for (int i = 0; i < totalPagos; i++) {
+        Pagos p = leer(i);
+        if (p.getNumeroSocio() != numeroSocio) continue;
+
+        int anio = p.getAnioPago();
+        int mes = p.getMesPago();
+
+        if(anio == _mes && mes == _anio)
+        {
+            deuda = true;
+        }
+    }
+
+    return deuda;
 }
 

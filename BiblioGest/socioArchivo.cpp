@@ -194,11 +194,12 @@ bool SocioArchivo::existeDni(const char* dni)
     for (int i = 0; i < total; i++) {
         Socio s = leer(i);
 
-        if (strcmp(s.getDni(), dni) == 0) {
-            return true;  // Existe y cumple el criterio
+        if (strcmp(s.getDni(), dni) == 0)
+        {
+            return true;
         }
     }
 
-    return false;  // No se encontró
+    return false;
 }
 

@@ -4,13 +4,12 @@ using namespace std;
 #include "Pagos.h"
 #include "Socio.h"
 
-// SETTERS
 void Pagos::setNumeroSocio(int numeroSocio) {
     this->numeroSocio = numeroSocio;
 }
 
 void Pagos::setFechaPago(Fecha fechaPago) {
-    this->fechaPago = fechaPago;
+    fechaPago = fechaPago;
 }
 
 void Pagos::setImporte(float importe) {
@@ -29,7 +28,6 @@ void Pagos::setEstado(bool estado) {
     this->estado = estado;
 }
 
-// GETTERS
 int Pagos::getNumeroSocio() {
     return numeroSocio;
 }
@@ -54,7 +52,6 @@ bool Pagos::getEstado() {
     return estado;
 }
 
-// CARGA DEL PAGO (asociado a un socio)
 void Pagos::cargarPago(Socio socio) {
     system("cls");
     cout << "REGISTRAR NUEVO PAGO" << endl;
@@ -75,7 +72,6 @@ void Pagos::cargarPago(Socio socio) {
     estado = true;
 }
 
-// MOSTRAR PAGO
 void Pagos::mostrar() {
     cout << "--------------------------" << endl;
     cout << "NUMERO DE SOCIO: " << numeroSocio << endl;

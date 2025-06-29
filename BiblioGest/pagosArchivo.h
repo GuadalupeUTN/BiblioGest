@@ -8,12 +8,14 @@ private:
     const char* nombreArchivo = "pagos.dat";
 
 public:
-    bool guardar(Pagos reg);                 // agrega al final
-    bool guardar(Pagos reg, int pos);        // sobrescribe en una posición
-    Pagos leer(int pos);                     // lee un registro por posición
-    int contarRegistros();                  // cuenta todos los registros
+    bool guardar(Pagos reg);
+    bool guardar(Pagos reg, int pos);
+    Pagos leer(int pos);
+    int contarRegistros();
     bool eliminarLogicamente(int numeroSocio);
     bool eliminarFisicamente(int numeroSocio);
+    bool tieneDeuda(int numeroSocio);
+    bool tieneDeudaPorFecha(int numeroSocio, int _mes, int _anio);
 };
 
 #endif // PAGOSARCHIVO_H

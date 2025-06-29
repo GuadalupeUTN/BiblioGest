@@ -29,8 +29,8 @@ void mostrarMenuSocio()
         // MARCO
         rlutil::setColor(rlutil::MAGENTA);
         for (int i = 0; i < 50; i++) {
-            rlutil::locate(25 + i, 6); cout << char(205); // línea superior
-            rlutil::locate(25 + i, 18); cout << char(205); // línea inferior
+            rlutil::locate(25 + i, 6); cout << char(205);
+            rlutil::locate(25 + i, 18); cout << char(205);
         }
 
         // OPCIONES
@@ -39,14 +39,18 @@ void mostrarMenuSocio()
         rlutil::locate(35, 9);  cout << "2. Listar todos los socios";
         rlutil::locate(35, 10); cout << "3. Buscar Socio (numero de socio)";
         rlutil::locate(35, 11); cout << "4. Buscar Socio (numero de DNI)";
-        rlutil::locate(35, 12); cout << "5. Eliminar Socio (numero de socio)";
-        rlutil::locate(35, 13); cout << "6. Eliminar Socio (numero de DNI)";
+        rlutil::locate(35, 12); cout << "5. Dar de baja Socio (numero de socio)";
+        rlutil::locate(35, 13); cout << "6. Dar de baja Socio (numero de DNI)";
         rlutil::locate(35, 14); cout << "0. Volver al menu principal";
 
         rlutil::setColor(rlutil::LIGHTGREEN);
         rlutil::locate(35, 16); cout << "Seleccione una opcion: ";
         rlutil::setColor(rlutil::WHITE);
         rlutil::locate(60, 16); cin >> opcion;
+        if (cin.fail())
+        {
+            break;
+        }
 
         cin.ignore();
 
@@ -186,7 +190,7 @@ void mostrarMenuSocio()
 
         archivo.eliminarLogicamente(nroSocio);
         rlutil::setColor(rlutil::GREEN);
-        cout << "✅ Socio eliminado logicamente del sistema." << endl;
+        cout << "✅ Socio dado de baja del sistema." << endl;
         break;
 
 
@@ -210,7 +214,8 @@ void mostrarMenuSocio()
                     archivo.guardar(s, i);
                     eliminado = true;
                     rlutil::setColor(rlutil::GREEN);
-                    cout << "✅ Socio eliminado logicamente." << endl;
+                    cout << "Socio dado de baja." << endl;
+
                     break;
                 }
             }
