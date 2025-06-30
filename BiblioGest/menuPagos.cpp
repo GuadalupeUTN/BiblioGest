@@ -6,6 +6,7 @@ using namespace std;
 #include "pagosArchivo.h"
 #include "socio.h"
 #include "socioArchivo.h"
+#include "PagosManager.h"
 #include <cstring>
 
 
@@ -36,7 +37,8 @@ void mostrarMenuPagos() {
         rlutil::locate(35, 14); cout << "7. Listar pagos por DNI";
         rlutil::locate(35, 15); cout << "8. Deuda de socio actual";
         rlutil::locate(35, 16); cout << "9. Deuda de socio por fecha";
-
+        rlutil::locate(35, 16); cout << "10. Cantidad de meses adeudados";
+        rlutil::locate(35, 16); cout << "11. Editar un pago";
         rlutil::locate(35, 17); cout << "0. Volver al menu principal";
 
         rlutil::setColor(rlutil::LIGHTGREEN);
@@ -44,7 +46,7 @@ void mostrarMenuPagos() {
         rlutil::setColor(rlutil::WHITE);
         rlutil::locate(60, 19); cin >> opcion;
         if (cin.fail()) {
-                cout << "❌ ERROR: Ingreso invalido.";
+                cout << "ERROR: Ingreso invalido.";
                 cin.clear(); cin.ignore(1000, '\n');
                 break;
             }
@@ -62,7 +64,7 @@ void mostrarMenuPagos() {
             cout << "Ingrese el numero de socio: ";
             cin >> nroSocio;
             if (cin.fail()) {
-                cout << "❌ ERROR: Ingreso invalido.";
+                cout << "ERROR: Ingreso invalido.";
                 cin.clear(); cin.ignore(1000, '\n');
                 break;
             }
@@ -76,7 +78,7 @@ void mostrarMenuPagos() {
                     cin>> eleccion;
                     if (cin.fail())
                     {
-                        cout << "❌ ERROR: Ingreso invalido.";
+                        cout << "ERROR: Ingreso invalido.";
                         cin.clear(); cin.ignore(1000, '\n');
                         break;
                     }
@@ -101,12 +103,12 @@ void mostrarMenuPagos() {
                 Pagos p;
                 p.cargarPago(s);
                 if (pagosArchivo.guardar(p)) {
-                    cout << "✅ Pago guardado correctamente.";
+                    cout << "Pago guardado correctamente.";
                 } else {
-                    cout << "❌ Error al guardar el pago.";
+                    cout << " Error al guardar el pago.";
                 }
             } else {
-                cout << "❌ Socio no encontrado.";
+                cout << "Socio no encontrado.";
             }
             break;
         }
@@ -116,7 +118,7 @@ void mostrarMenuPagos() {
             cout << "Ingrese el numero de socio: ";
             cin >> nroSocio;
             if (cin.fail()) {
-                cout << "❌ ERROR: Ingreso invalido.";
+                cout << " ERROR: Ingreso invalido.";
                 cin.clear(); cin.ignore(1000, '\n');
                 break;
             }
@@ -221,7 +223,7 @@ void mostrarMenuPagos() {
             }
 
             if (numeroSocio == -1) {
-                cout << "⚠️  No se encontro un socio activo con ese DNI.";
+                cout << "No se encontro un socio activo con ese DNI.";
                 break;
             }
 
@@ -238,7 +240,7 @@ void mostrarMenuPagos() {
             }
 
             if (!encontrado)
-                cout << "⚠️  El socio no tiene pagos registrados.";
+                cout << "El socio no tiene pagos registrados.";
             break;
         }
 
@@ -249,7 +251,7 @@ void mostrarMenuPagos() {
                 cin>>nroSocio;
                 if (cin.fail())
                 {
-                    cout << "❌ ERROR: Ingreso invalido.";
+                    cout << "ERROR: Ingreso invalido.";
                     cin.clear(); cin.ignore(1000, '\n');
                     break;
                 }
@@ -295,12 +297,52 @@ void mostrarMenuPagos() {
                 }
             }
             break;
+        case 10:
+            {
+                int nroSocio;
+                PagosManager m;
+                cout << "INGRESE EL NUMERO DE SOCIO: ";
+                cin>>nroSocio;
+                int cantMeses = m.cantidadDeMesesAdeudados(nroSocio);
+                cout<<"ADEUDA "<<cantMeses<<" DE MESES"<<endl;
+
+            }
+            break;
+
+        case 11:
+            {
+
+                PagosManager m;
+                int nroSocio, mes, anio;
+                bool editado = false;
+                cout<<"INGRESE EL NUMERO DE SOCIO: ";
+                cin>>nroSocio;
+                cout<<"INGRESE EL MES DEL PAGO: ";
+                cin>>mes;
+                cout<<"INGRESE EL ANIO DEL PAGO: ";
+                cin>>anio;
+
+                if(nroSocio > 0 && mes > 0 && mes < 13 && anio > 2000 && anio < 2030)
+                {
+                    editado = m.editar(nroSocio, mes, anio);
+                }
+
+                if(editado)
+                {
+                    cout<<"SE HA EDITADO CORRECTAMENTE"<<endl;
+                }
+                else
+                {
+                    cout<<"HUBO PROBLEMAS EN LA EDICION"<<endl;
+                }
+            }
+            break;
         case 0:
             cout << "Volviendo al menu principal...";
             break;
 
         default:
-            cout << "❌ Opcion invalida.";
+            cout << "Opcion invalida.";
             break;
         }
 

@@ -4,7 +4,7 @@ using namespace std;
 #include "ArchivoPrestamos.h"
 PrestamosArchivo::PrestamosArchivo(){
     nombreArchivo="prestamos.dat";
-};
+}
 Prestamos PrestamosArchivo::leer(int pos){
      FILE *pArchivo = fopen(nombreArchivo, "rb");
     if (pArchivo == NULL){
@@ -16,7 +16,7 @@ fread(&p, sizeof(Prestamos), 1, pArchivo);
     fclose(pArchivo);
     return p;
 
-};
+}
 bool PrestamosArchivo::guardar(Prestamos& reg){
      int total = contarRegistros();
     int ultimoNumero = 0;
@@ -37,7 +37,7 @@ bool PrestamosArchivo::guardar(Prestamos& reg){
     bool exito = fwrite(&reg, sizeof(Prestamos), 1, p);
     fclose(p);
     return exito;
-};
+}
 bool PrestamosArchivo::guardarEnPosicion(Prestamos p, int pos){
      FILE *pArchivo = fopen(nombreArchivo, "rb+");
     if (pArchivo == NULL){
@@ -47,7 +47,7 @@ bool PrestamosArchivo::guardarEnPosicion(Prestamos p, int pos){
     bool ok = fwrite(&p, sizeof(Prestamos), 1, pArchivo);
     fclose(pArchivo);
     return ok;
-};
+}
 int PrestamosArchivo::contarRegistros(){
     FILE *pArchivo = fopen(nombreArchivo, "rb");
     if (pArchivo == NULL) {
@@ -57,7 +57,7 @@ int PrestamosArchivo::contarRegistros(){
     int cantidadRegistros = ftell(pArchivo) / sizeof(Prestamos);
     fclose(pArchivo);
     return cantidadRegistros;
-};
+}
 void PrestamosArchivo::leerTodos(int cantidadRegistros, Prestamos *vector){
         FILE *pArchivo = fopen(nombreArchivo, "rb");
     if(pArchivo == NULL){
@@ -67,7 +67,7 @@ void PrestamosArchivo::leerTodos(int cantidadRegistros, Prestamos *vector){
         fread(&vector[i], sizeof(Prestamos), 1, pArchivo);
     }
     fclose(pArchivo);
-};
+}
 
 int PrestamosArchivo::buscarPrestamos(int _IDPrestamo){
   FILE* pArchivo = fopen(nombreArchivo, "rb");
@@ -91,7 +91,7 @@ int PrestamosArchivo::buscarPrestamos(int _IDPrestamo){
 
     fclose(pArchivo);
     return -1;
-};
+}
 void PrestamosArchivo::mostrarListadoPrestamos(){
 PrestamosArchivo arc;
 int cantidad = arc.contarRegistros();
@@ -100,8 +100,11 @@ Prestamos* vector = new Prestamos[cantidad];
 arc.leerTodos(cantidad, vector);
 
 for (int i = 0; i < cantidad; i++) {
-    vector[i].mostrarPrestamo();
+    if(vector[i].getEstado())
+    {
+        vector[i].mostrarPrestamo();
+    }
 }
 
 delete[] vector;
-};
+}

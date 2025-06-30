@@ -394,3 +394,215 @@
 	<string>
 	"Prestamos.h"
 
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivoautores.cpp
+	<iostream>
+	"ArchivoAutores.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivoautores.h
+	<string>
+	"Autores.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\autores.h
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivogeneros.cpp
+	<iostream>
+	"Generos.h"
+	"ArchivoGeneros.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\generos.h
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivogeneros.h
+	<string>
+	"Generos.h"
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivolibros.cpp
+	<iostream>
+	<cstring>
+	"archivoLibros.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivolibros.h
+	<string>
+	"Libro.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\libro.h
+	"Fecha.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\fecha.h
+	<string>
+
+1751303266 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivoprestamos.cpp
+	<iostream>
+	<cstring>
+	"ArchivoPrestamos.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\archivoprestamos.h
+	<string>
+	"Prestamos.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\prestamos.h
+	"Fecha.h"
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\autores.cpp
+	<iostream>
+	<cstring>
+	"Autores.h"
+	"ArchivoAutores.h"
+	"archivoLibros.h"
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\generos.cpp
+	<iostream>
+	<string.h>
+	"Generos.h"
+	"ArchivoGeneros.h"
+	"archivoLibros.h"
+
+1751302598 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\libro.cpp
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Libro.h"
+	"Generos.h"
+	"Autores.h"
+	"archivoLibros.h"
+	"ArchivoAutores.h"
+	"ArchivoGeneros.h"
+	"funcionesPantallasInteractivas.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1751302567 c:\users\flore\downloads\bkp\bibliogest\bibliogest\funcionespantallasinteractivas.h
+
+1751302106 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\main.cpp
+	<iostream>
+	"Libro.h"
+	"Fecha.h"
+	"Generos.h"
+	"Autores.h"
+	"Prestamos.h"
+	"ArchivoGeneros.h"
+	"ArchivoAutores.h"
+	"ArchivoPrestamos.h"
+	"archivoLibros.h"
+	"funcionesPantallasInteractivas.h"
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menu.cpp
+	<iostream>
+	<cstring>
+	"Socio.h"
+	"SocioArchivo.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\socio.h
+	"Fecha.h"
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\socioarchivo.h
+	"Socio.h"
+
+1751302106 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menulibros.cpp
+	<iostream>
+	<cstring>
+	"rlutil.h"
+	"funcionesPantallasInteractivas.h"
+	"Libro.h"
+	"archivoLibros.h"
+	"ArchivoGeneros.h"
+	"ArchivoAutores.h"
+
+1751307705 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menupagos.cpp
+	<iostream>
+	"rlutil.h"
+	"pagos.h"
+	"pagosArchivo.h"
+	"socio.h"
+	"socioArchivo.h"
+	"PagosManager.h"
+	<cstring>
+
+1751295550 c:\users\flore\downloads\bkp\bibliogest\bibliogest\pagos.h
+	"Fecha.h"
+	"socio.h"
+
+1751302104 c:\users\flore\downloads\bkp\bibliogest\bibliogest\pagosarchivo.h
+	"pagos.h"
+
+1751302716 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menuprincipal.cpp
+	<iostream>
+	"rlutil.h"
+	"funcionesPantallasInteractivas.h"
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menusocio.cpp
+	<iostream>
+	"rlutil.h"
+	"funcionesPantallasInteractivas.h"
+	"socio.h"
+	"socioArchivo.h"
+	"pagos.h"
+	"pagosArchivo.h"
+	<cstring>
+
+1751302104 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\pagosarchivo.cpp
+	<cstdio>
+	"pagosArchivo.h"
+	<ctime>
+
+1751306853 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\prestamos.cpp
+	<iostream>
+	<cstring>
+	"Prestamos.h"
+	"ArchivoPrestamos.h"
+	"Fecha.h"
+	"socio.h"
+	"socioArchivo.h"
+	"Libro.h"
+	"archivoLibros.h"
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\socio.cpp
+	<cstring>
+	<iostream>
+	"Socio.h"
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\socioarchivo.cpp
+	<cstdio>
+	"SocioArchivo.h"
+	<cstring>
+
+1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\validaciones.cpp
+	<iostream>
+	<cstring>
+
+1751307896 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\pagosmanager.cpp
+	<iostream>
+	"PagosManager.h"
+	"pagosArchivo.h"
+	"pagos.h"
+	"socio.h"
+	"socioArchivo.h"
+	<ctime>
+
+1751302126 c:\users\flore\downloads\bkp\bibliogest\bibliogest\pagosmanager.h
+
+1751302159 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\pagos.cpp
+	<iostream>
+	"Pagos.h"
+	"Socio.h"
+
+1751306807 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\prestamosmenu.cpp
+	<iostream>
+	"Prestamos.h"
+	"ArchivoPrestamos.h"
+

@@ -57,7 +57,7 @@ void Pagos::cargarPago(Socio socio) {
     cout << "REGISTRAR NUEVO PAGO" << endl;
     cout << "---------------------" << endl;
 
-    numeroSocio = socio.getNumeroSocio();  // asociamos el pago al socio
+    numeroSocio = socio.getNumeroSocio();
 
     cout << "FECHA DE PAGO:" << endl;
     fechaPago.cargar();

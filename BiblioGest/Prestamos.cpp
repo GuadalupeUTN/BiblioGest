@@ -16,17 +16,17 @@ _IDSocio=0;
 _fechaPrestamo=Fecha();
 _fechaDevolucion=Fecha();
 _estado=true;
-};
+}
 
 Prestamos::Prestamos(Fecha fechaPrestamo, Fecha fechaDevolucion){
 _IDPrestamos=0;
 _fechaPrestamo=fechaPrestamo;
 _fechaDevolucion=fechaDevolucion;
-};
+}
 
 int Prestamos::getIDPrestamos(){
 return _IDPrestamos;
-};
+}
 
 int Prestamos::getIDSocio(){
 return _IDSocio;
@@ -38,11 +38,11 @@ return _ISBN;
 
 Fecha Prestamos::getFechaPrestamo(){
 return _fechaPrestamo;
-};
+}
 
 Fecha Prestamos::getFechaDevolucion(){
 return _fechaDevolucion;
-};
+}
 
 bool Prestamos::getEstado(){
 return _estado;
@@ -50,7 +50,7 @@ return _estado;
 
 void Prestamos::setIDPrestamos(int IDPrestamos){
 _IDPrestamos=IDPrestamos;
-};
+}
 
 void Prestamos::setIDSocio(int IDSocio){
 _IDSocio=IDSocio;
@@ -62,10 +62,10 @@ strcpy(_ISBN, ISBN);
 
 void Prestamos::setFechaPrestamo(Fecha fechaPrestamo){
 _fechaPrestamo=fechaPrestamo;
-};
+}
 void Prestamos::setFechaDevolucion(Fecha fechaDevolucion){
 _fechaDevolucion=fechaDevolucion;
-};
+}
 
 void Prestamos::setEstado(bool estado){
 _estado=estado;
@@ -100,7 +100,7 @@ if (posLibro>=0){
 cout <<"---------------------------------"<<endl;
 cout << "AHORA INGRESE LA FECHA DE PRESTAMO:"<<endl;
 this -> _fechaPrestamo.cargar();
-};
+}
 
 void Prestamos::mostrarPrestamo(){
     PrestamosArchivo arcPrestamo;
@@ -110,8 +110,44 @@ void Prestamos::mostrarPrestamo(){
 cout<<"ID:"<<_IDPrestamos<<"-";
 cout<<"N°SOCIO:"<<_IDSocio<<"-";
 cout<<"FECHA PRESTAMO:"<<_fechaPrestamo<<"-";
-};
-
-void Prestamos::editarPrestamo(){
-
 }
+
+void Prestamos::editarPrestamo() {
+    cout << "=== MODIFICAR PRESTAMO ===" << endl;
+
+    int opcion;
+    do {
+        cout << "1. Cambiar fecha de devolución" << endl;
+        cout << "2. Cambiar estado (activo/inactivo)" << endl;
+        cout << "0. Salir de edición" << endl;
+        cout << "Seleccione una opción: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1:
+            cout << "Ingrese nueva fecha de devolución: " << endl;
+            _fechaDevolucion.cargar();
+            cout << "Fecha de devolución actualizada correctamente." << endl;
+            break;
+
+        case 2:
+            cout << "Ingrese nuevo estado (1 = activo, 0 = inactivo): ";
+            cin >> _estado;
+            if (_estado)
+                cout << "Estado cambiado a activo." << endl;
+            else
+                cout << "Estado cambiado a inactivo." << endl;
+            break;
+
+        case 0:
+            cout << "Saliendo de la edición del préstamo." << endl;
+            break;
+
+        default:
+            cout << "Opción inválida." << endl;
+        }
+
+        cout << "-------------------------" << endl;
+    } while (opcion != 0);
+}
+

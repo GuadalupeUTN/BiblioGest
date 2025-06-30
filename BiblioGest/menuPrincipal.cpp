@@ -62,18 +62,19 @@ void mostrarMenuPrincipal()
             rlutil::cls();
             //cout<< "ESTAMOS TRABAJANDO EN ESTA OPCION, REGRESE AL MENU PRINCIPAL CON CUALQUIER TECLA"<<endl;
 
-           // mostrarMenuPagos();
+           mostrarMenuPagos();
         }
         break;
         case 4:
         {
             rlutil::cls();
-            cout<< "ESTAMOS TRABAJANDO EN ESTA OPCION, REGRESE AL MENU PRINCIPAL CON CUALQUIER TECLA"<<endl;
+            mostrarMenuPrestamos();
+            /*cout<< "ESTAMOS TRABAJANDO EN ESTA OPCION, REGRESE AL MENU PRINCIPAL CON CUALQUIER TECLA"<<endl;
             int volver=rlutil::getkey();
             if (volver==1)
             {
                 mostrarMenuPrincipal();
-            }
+            }*/
         }
         break;
         case 5:
