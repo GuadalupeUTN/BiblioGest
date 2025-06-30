@@ -56,9 +56,8 @@
 	"ArchivoAutores.h"
 	"funcionesPantallasInteractivas.h"
 
-1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.h
+1751254648 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.h
 	"Fecha.h"
-	"Generos.h"
 
 1749520457 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\fecha.h
 	<string>
@@ -71,15 +70,21 @@
 	"Fecha.h"
 	<iostream>
 
-1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
+1751254613 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
 	<iostream>
-	"Libro.h"
 	<string.h>
+	"rlutil.h"
+	"Libro.h"
+	"Generos.h"
+	"Autores.h"
+	"archivoLibros.h"
+	"ArchivoAutores.h"
+	"ArchivoGeneros.h"
+	"funcionesPantallasInteractivas.h"
 
-1749510900 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menu.cpp
+1751254790 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menu.cpp
 	<iostream>
 	<cstring>
-	"Menu.h"
 	"Socio.h"
 	"SocioArchivo.h"
 
@@ -104,11 +109,12 @@
 	"rlutil.h"
 	"funcionesPantallasInteractivas.h"
 
-1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.cpp
+1751254769 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.cpp
 	<iostream>
+	<cstring>
 	"archivoLibros.h"
 
-1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.h
+1751254743 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.h
 	<string>
 	"Libro.h"
 
@@ -144,19 +150,21 @@
 
 1751254207 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\generos.h
 
-1750676150 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\generos.cpp
+1751254178 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\generos.cpp
 	<iostream>
 	<string.h>
 	"Generos.h"
 	"ArchivoGeneros.h"
+	"archivoLibros.h"
 
 1751254480 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\autores.h
 
-1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\autores.cpp
+1751254504 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\autores.cpp
 	<iostream>
 	<cstring>
 	"Autores.h"
 	"ArchivoAutores.h"
+	"archivoLibros.h"
 
 1751254455 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivoautores.cpp
 	<iostream>
