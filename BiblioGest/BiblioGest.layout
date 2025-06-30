@@ -2,19 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Release" />
-	<File name="Generos.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Fecha.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="178" topLine="0" />
+			<Cursor1 position="522" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Prestamos.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArchivoGeneros.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="181" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="menuLibros.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="504" topLine="38" />
+			<Cursor1 position="376" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Autores.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -22,14 +17,69 @@
 			<Cursor1 position="47" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="menuLibros.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="504" topLine="38" />
+		</Cursor>
+	</File>
+	<File name="Generos.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="409" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="socioArchivo.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="1713" topLine="33" />
 		</Cursor>
 	</File>
+	<File name="ArchivoAutores.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1830" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Prestamos.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="491" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="Libro.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="171" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="Fecha.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="897" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="Prestamos.h" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="181" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="socio.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="109" topLine="29" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="402" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="ArchivoAutores.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="77" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="archivoLibros.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="ArchivoLibros.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1160" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="socioArchivo.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -42,14 +92,9 @@
 			<Cursor1 position="1175" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Prestamos.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ArchivoGeneros.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="491" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="Fecha.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="522" topLine="0" />
+			<Cursor1 position="2146" topLine="81" />
 		</Cursor>
 	</File>
 	<File name="Libro.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -57,9 +102,9 @@
 			<Cursor1 position="1575" topLine="77" />
 		</Cursor>
 	</File>
-	<File name="ArchivoGeneros.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="rlutil.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="376" topLine="0" />
+			<Cursor1 position="0" topLine="12" />
 		</Cursor>
 	</File>
 	<File name="menu.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -67,39 +112,9 @@
 			<Cursor1 position="3253" topLine="49" />
 		</Cursor>
 	</File>
-	<File name="ArchivoAutores.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Generos.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="77" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="rlutil.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="ArchivoAutores.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1830" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="funcionesPantallasInteractivas.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="223" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Libro.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="171" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Generos.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="409" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="archivoLibros.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="14" topLine="0" />
+			<Cursor1 position="178" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="socio.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -107,9 +122,9 @@
 			<Cursor1 position="0" topLine="5" />
 		</Cursor>
 	</File>
-	<File name="menu.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="funcionesPantallasInteractivas.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="220" topLine="0" />
+			<Cursor1 position="223" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Autores.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -117,24 +132,9 @@
 			<Cursor1 position="113" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ArchivoLibros.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="menu.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1160" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="402" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="socio.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="109" topLine="29" />
-		</Cursor>
-	</File>
-	<File name="ArchivoGeneros.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2146" topLine="81" />
+			<Cursor1 position="220" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

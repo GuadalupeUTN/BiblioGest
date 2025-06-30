@@ -3,10 +3,10 @@
 class Generos
 {
 private:
-    static int idAux;
     int _IDGenero;
     char _genero[20];
     int _cantLibros;
+    bool _estado;
 public:
     Generos();
     Generos( const char* genero, int cantLibros );
@@ -14,11 +14,13 @@ public:
     int getIDGenero();
     const char* getGenero();
     int getCantLibros();
+    bool getEstado();
 
+    void setIDGenero(int IDGenero);
     void setGenero(const char* genero);
     void setCantLibros(int cantLibros);
+    void setEstado(bool estado);
 
-    static void inicializarID();
 
     void cargarGenero();
     void mostrarGeneros();

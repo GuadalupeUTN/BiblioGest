@@ -46,18 +46,17 @@
 	<iostream>
 	"Socio.h"
 
-1750720037 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\main.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\main.cpp
 	<iostream>
 	"Libro.h"
 	"Fecha.h"
-	"menu.h"
 	"Generos.h"
 	"Autores.h"
 	"ArchivoGeneros.h"
 	"ArchivoAutores.h"
 	"funcionesPantallasInteractivas.h"
 
-1750364707 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.h
 	"Fecha.h"
 	"Generos.h"
 
@@ -66,13 +65,13 @@
 
 1749510362 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menu.h
 
-1749745252 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\funcionespantallasinteractivas.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\funcionespantallasinteractivas.h
 
 1749520435 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\fecha.cpp
 	"Fecha.h"
 	<iostream>
 
-1749520370 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
 	<iostream>
 	"Libro.h"
 	<string.h>
@@ -84,49 +83,49 @@
 	"Socio.h"
 	"SocioArchivo.h"
 
-1749510362 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socio.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socio.h
 	"Fecha.h"
 
-1749510362 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socioarchivo.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socioarchivo.h
 	"Socio.h"
 
-1749510362 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socio.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socio.cpp
 	<cstring>
 	<iostream>
 	"Socio.h"
 
-1749510362 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socioarchivo.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\socioarchivo.cpp
 	<cstdio>
 	"SocioArchivo.h"
+	<cstring>
 
-1749735146 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menuprincipal.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menuprincipal.cpp
 	<iostream>
 	"rlutil.h"
 	"funcionesPantallasInteractivas.h"
-	"menu.h"
 
-1749750338 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.cpp
 	<iostream>
 	"archivoLibros.h"
 
-1749747961 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivolibros.h
 	<string>
 	"Libro.h"
 
-1750364707 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menulibros.cpp
+1751130270 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menulibros.cpp
 	<iostream>
 	"funcionesPantallasInteractivas.h"
 	"Libro.h"
 	"archivoLibros.h"
 	<cstring>
 
-1749770266 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\prestamos.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\prestamos.cpp
 	<iostream>
 	"Prestamos.h"
 	"Fecha.h"
 	"socio.h"
 
-1749520266 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\prestamos.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\prestamos.h
 	"Fecha.h"
 
 1749585755 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\rlutil.h
@@ -143,7 +142,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1750675964 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\generos.h
+1751254207 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\generos.h
 
 1750676150 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\generos.cpp
 	<iostream>
@@ -151,28 +150,28 @@
 	"Generos.h"
 	"ArchivoGeneros.h"
 
-1750722453 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\autores.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\autores.h
 
-1750719764 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\autores.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\autores.cpp
 	<iostream>
 	<cstring>
 	"Autores.h"
 	"ArchivoAutores.h"
 
-1750719694 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivoautores.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivoautores.cpp
 	<iostream>
 	"ArchivoAutores.h"
 
-1750720030 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivogeneros.cpp
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivogeneros.cpp
 	<iostream>
 	"Generos.h"
 	"ArchivoGeneros.h"
 
-1750636283 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivogeneros.h
+1751254271 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivogeneros.h
 	<string>
 	"Generos.h"
 
-1750719646 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivoautores.h
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\archivoautores.h
 	<string>
 	"Autores.h"
 
@@ -333,6 +332,37 @@
 	<ctime>
 
 1751166646 source:c:\users\flore\onedrive\escritorio\tec. programacion\programacion ii\bibliogest\bibliogest\validaciones.cpp
+	<iostream>
+	<cstring>
+
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menusocio.cpp
+	<iostream>
+	"rlutil.h"
+	"funcionesPantallasInteractivas.h"
+	"socio.h"
+	"socioArchivo.h"
+	"pagos.h"
+	"pagosArchivo.h"
+	<cstring>
+
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\pagos.h
+	"Fecha.h"
+	"socio.h"
+
+1751253692 c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\pagosarchivo.h
+	"pagos.h"
+
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\pagos.cpp
+	<iostream>
+	"Pagos.h"
+	"Socio.h"
+
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\pagosarchivo.cpp
+	<cstdio>
+	"pagosArchivo.h"
+	<ctime>
+
+1751253692 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\validaciones.cpp
 	<iostream>
 	<cstring>
 
