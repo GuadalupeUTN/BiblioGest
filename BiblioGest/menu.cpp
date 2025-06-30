@@ -3,7 +3,7 @@
 using namespace std;
 #include "Socio.h"
 #include "SocioArchivo.h"
-
+/*
 void Menu::ejecutar()
 {
     int opcion;
@@ -145,4 +145,4 @@ void Menu::buscarSocioDni()
         cout << "No se encontró un socio con ese DNI." << endl;
     }
 }
-
+*/

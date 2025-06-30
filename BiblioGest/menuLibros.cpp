@@ -1,27 +1,29 @@
 #include <iostream>
-
+#include <cstring>
+#include "rlutil.h"
 using namespace std;
 #include "funcionesPantallasInteractivas.h"
 #include "Libro.h"
 #include "archivoLibros.h"
-#include <cstring>
+#include "ArchivoGeneros.h"
+#include "ArchivoAutores.h"
 void mostrarMenuLibros()
 {
     int op;
     Libro milibro;
-    LibroArchivo archivo;
+    LibroArchivo arcLibro;
     do
     {
 
         cout <<"NUESTROS LIBROS"<<endl;
-        cout<<"1-Cargar libro"<<endl;
-        cout<<"2-Mostrar libro"<<endl;
-        cout<<"3-Editar libro"<<endl;
-        cout<<"4-Disponibilidad"<<endl;
-        cout<<"5-Buscar por ISBN"<<endl;
-        cout<<"6-Buscar por Genero"<<endl;
-        cout<<"7-Buscar por Autor"<<endl;
-        cout <<"0-Salir"<<endl;
+        cout<<"1-REGISTRAR NUEVO LIBRO"<<endl;
+        cout<<"2-NUESTRA BIBLIOTECA"<<endl;
+        cout<<"3-EDITAR LIBRO"<<endl;
+        cout<<"4-BAJA DE LIBRO"<<endl;
+        cout<<"5-ENCONTRAR POR ISBN"<<endl;
+        cout<<"6-ENCONTRAR POR GENERO"<<endl;
+        cout<<"7-ENCONTRAR POR AUTOR/A"<<endl;
+        cout <<"0-VOLVER A MENU PRINCIPAL"<<endl;
 
         cin >> op;
         cin.ignore();
@@ -31,62 +33,72 @@ void mostrarMenuLibros()
         case 1:
         {
             cout<<endl;
+            cout << "================ REGISTRO DE NUEVO LIBRO ================" << endl;
             milibro.cargarLibro();
-            if(archivo.guardar(milibro))
+            if(arcLibro.guardar(milibro))
             {
-                cout << "Libro guardado exitosamente." << endl;
+                cout << "LIBRO GUARDADO" << endl;
             }
             else
             {
-                cout << "Error al guardar el libro." << endl;
+                cout << "ERROR-NO SE PUDO GUARDAR EL LIBRO" << endl;
             }
         }
 
         break;
         case 2:
-            cout<<endl;
-            milibro.mostrarLibro();
+        {
+            cout<<"================ NUESTRA BIBLIOTECA ================" <<endl;
 
-            break;
+            arcLibro.mostrarListadoLibros();
+        }
+        break;
         case 3:
-            cout<<endl;
-
-            milibro.editarLibro();
-            break;
+        {
+            rlutil::cls();
+            cout << "================ EDITAR UN LIBRO ================" << endl;
+            milibro.editarLibro();}
+        break;
         case 4:
-            cout<<endl;
-            milibro.disponibilidadLibro();
+            cout << "================ BAJA DE LIBRO ================" << endl;
             break;
         case 5:
-            /* cout<<endl;
-             char isbn[13];
-             cout << "PORFAVOR INGRESE EL CODIGO ISBN: ";
-             cin >> isbn;
-             if (isbn>13)
-             {
-                 cout << "CODIGO NO VALIDO-MAXIMO 13 CARACTERES" << endl;
-             }
-
-             int total = archivo.contarRegistros();
-             bool encontrado = false;
-
-             for (int i=0; i<total; i++)
-             {
-                 milibro = archivo.leer(i);
-                 if (strcmp(milibro.getISBN(), isbn.c_str()) == 0)
-                 {
-                     cout << "LIBRO ENCONTRADO:" << endl;
-                     milibro.mostrarLibro();
-                     encontrado = true;
-                     break;
-                 }
-             }
-
-             if (!encontrado)
-             {
-                 cout << "Lo sentimos, no se encontró ningun libro con ese ISBN." << endl;
-             }*/
-            break;
+        {
+            rlutil::cls(),
+                   cout << "================ ENCONTRAR POR ISBN ================" << endl;
+            char isbnElegido[14];
+            cout<< "INGRESE EL ISBN DEL LIBRO QUE DESEA ENCONTRAR"<<endl;
+            cout << "ISBN:";
+            cin.getline(isbnElegido, 14);
+            cin.ignore();
+            int pos = arcLibro.buscarISBN(isbnElegido);
+            if (pos < 0)
+            {
+                cout << "NO SE ENCONTRO EL LIBRO CON ESE ISBN" << endl;
+                return;
+            }
+            else cout <<"SE ENCONTRO EL SIGUIENTE RESULTADO:"<<endl;
+            Libro lib = arcLibro.leer(pos);
+            lib.mostrarLibro();
+        }
+        break;
+        case 6:
+        {
+            rlutil::cls();
+            cout << "================ FILTRAR POR GENERO ================" << endl;
+            cout<< "INGRESE EL ID GENERO DE LOS LIBROS QUE DESEA ENCONTRAR. SI NO ENCUENTRA EL GENERO QUE DESEA EN ESTA LISTA, LAMENTAMOS INFORMARLE QUE NO CONTAMOS CON EJEMPLARES POR EL MOMENTO."<<endl;
+            cout << "GENERO:";
+            int idGen;
+            GeneroArchivo arcGenero;
+            cin >> idGen;
+            arcGenero.mostrarListadoGeneros();
+        }
+        break;
+        case 7:
+        {
+            cout << "================ ENCONTRAR POR AUTOR/A ================" << endl;
+        }
+        break;
         case 0:
             op=0;
             break;

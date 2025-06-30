@@ -62,7 +62,7 @@ void mostrarMenuPrincipal()
             rlutil::cls();
             //cout<< "ESTAMOS TRABAJANDO EN ESTA OPCION, REGRESE AL MENU PRINCIPAL CON CUALQUIER TECLA"<<endl;
 
-            mostrarMenuPagos();
+           // mostrarMenuPagos();
         }
         break;
         case 4:

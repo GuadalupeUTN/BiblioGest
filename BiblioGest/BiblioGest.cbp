@@ -28,6 +28,8 @@
 		<Unit filename="ArchivoGeneros.cpp" />
 		<Unit filename="ArchivoGeneros.h" />
 		<Unit filename="ArchivoLibros.cpp" />
+		<Unit filename="ArchivoPrestamos.cpp" />
+		<Unit filename="ArchivoPrestamos.h" />
 		<Unit filename="Autores.cpp" />
 		<Unit filename="Autores.h" />
 		<Unit filename="Fecha.cpp" />
@@ -45,11 +47,17 @@
 		<Unit filename="menu.h" />
 		<Unit filename="menuLibros.cpp" />
 		<Unit filename="menuPrincipal.cpp" />
+		<Unit filename="menuSocio.cpp" />
+		<Unit filename="pagos.cpp" />
+		<Unit filename="pagos.h" />
+		<Unit filename="pagosArchivo.cpp" />
+		<Unit filename="pagosArchivo.h" />
 		<Unit filename="rlutil.h" />
 		<Unit filename="socio.cpp" />
 		<Unit filename="socio.h" />
 		<Unit filename="socioArchivo.cpp" />
 		<Unit filename="socioArchivo.h" />
+		<Unit filename="validaciones.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

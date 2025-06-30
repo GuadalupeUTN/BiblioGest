@@ -214,6 +214,7 @@ void Libro::mostrarLibro()
 
     autor = arcAutor.leer(_IDAutor - 1);
 
+    cout<<"==================================="<<endl;
     cout << "ISBN:"<< _ISBN << endl;
 
     cout << "TITULO:" << _titulo << endl;
@@ -225,6 +226,7 @@ void Libro::mostrarLibro()
     cout << "FECHA DE PUBLICACION:"<< _fechaPubli<< endl;
 
     cout << "CANTIDAD DISPONIBLE:" << _cantDisponible << endl;
+    cout<<"==================================="<<endl;
 
 };
 void Libro::editarLibro()

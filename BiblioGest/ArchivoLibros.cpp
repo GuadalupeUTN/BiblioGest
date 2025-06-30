@@ -129,6 +129,18 @@ for (int i = 0; i < cantidad; i++) {
 delete[] vector;
 }
 
+void LibroArchivo::disponibilidadLibro(char isbn[14]){
+int pos=buscarISBN(isbn);
+Libro libro = leer(pos);
+if (libro.getCantDisponible() <= 0) {
+    cout << "NO HAY EJEMPLARES DISPONIBLES DE ESTE LIBRO" << endl;
+    libro.mostrarLibro();
+    return;
+}
+libro.setCantiDisponible(libro.getCantDisponible() - 1);
+guardarEnPosicion(libro, pos);
+}
+
 void LibroArchivo::eliminarRegistroLibro(){
     /*
 LibroArchivo arc;

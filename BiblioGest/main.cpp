@@ -5,49 +5,17 @@ using namespace std;
 #include "Fecha.h"
 #include "Generos.h"
 #include "Autores.h"
+#include "Prestamos.h"
 #include "ArchivoGeneros.h"
 #include "ArchivoAutores.h"
+#include "ArchivoPrestamos.h"
+#include "archivoLibros.h"
 #include "funcionesPantallasInteractivas.h"
 int main()
 {
-    //Menu _menu;
+PrestamosArchivo arcPrestamo;
 
-    //_menu.ejecutar();
+ //mostrarMenuPrincipal();
 
- mostrarMenuPrincipal();
-  // Generos::inicializarID();
-  // Autores::inicializarID();
-   //PRUEBAS LIBROS
-   //PRUEBAS AUTORES
-/*
-Autores autor1;
-autor1.cargarAutor();
-if (arc.guardar(autor1)){
-    cout<<"GUARDADO";
-}
-else cout <<"ERROR";
-
-   //PRUEBAS GENEROS
-Generos genero1;
-genero1.cargarGenero();
-if (arc.guardar(genero1)){
-    cout<<"GUARDADO";
-}
-else cout <<"ERROR";
-GeneroArchivo arc;
-
-//LEER TODOS LOS ARC CON MEM DINAMIC
-AutoresArchivo arc;
-int cantidad = arc.contarRegistros();
-Autores* vector = new Autores[cantidad];
-
-arc.leerTodos(cantidad, vector);
-
-for (int i = 0; i < cantidad; i++) {
-    vector[i].mostrarAutor();
-}
-
-delete[] vector;
-*/
     return 0;
 }
