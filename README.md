@@ -19,8 +19,8 @@ Este sistema permitirá administrar operaciones relacionadas con la gestión de 
 
 ## Reportes🚨
 Además de las consultas especificadas anteriormente, se efectuarán una serie de reportes que brindarán información valiosa al usuario para la organización de la biblioteca:
-* Ranking de libros con mayores préstamos: Un top de los 10 libros más solicitados, independientemente del género. 
-* Ranking de libros con menores préstamos: para revisar qué libros tienen poco movimiento.
+
+* Socios con deudas activas.
 * Socios con membresía inactiva, pero préstamos activos: para controlar que no se prestan libros a usuarios que no están al día.
 
 ## Clases 📂
