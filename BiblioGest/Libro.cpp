@@ -200,7 +200,7 @@ void Libro::cargarLibro()
     cout << "CANTIDAD DE UNIDADES:";
     cin >> _cantDisponible;
     cout << endl;
-};
+}
 
 void Libro::mostrarLibro()
 {
@@ -231,7 +231,7 @@ rlutil::setColor(rlutil::YELLOW);
     rlutil::setColor(rlutil::YELLOW);
     cout<<"==================================="<<endl;
 
-};
+}
 void Libro::editarLibro()
 {
     //SOLO SE EDITA LO YA EXISTENTE. CANT DISPONIBLE SE ACTUALIZA AUTOMATICAMENTE.
@@ -362,7 +362,7 @@ void Libro::editarLibro()
         }
     }
     while(opcion!=0);
-};
+}
 void Libro::disponibilidadLibro()
 {
 //getISBN
@@ -381,4 +381,4 @@ void Libro::disponibilidadLibro()
         rlutil::setColor(rlutil::GREEN);
         cout << "DISPONIBLE";
     }
-};
+}

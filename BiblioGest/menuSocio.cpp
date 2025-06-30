@@ -75,13 +75,13 @@ void mostrarMenuSocio()
 
         if (archivo.existeDni(socio.getDni())) {
             rlutil::setColor(rlutil::RED);
-            cout << "⚠  Ya existe un socio registrado con ese DNI." << endl;
+            cout << "Ya existe un socio registrado con ese DNI." << endl;
             break;
         }
 
         archivo.guardar(socio);
         rlutil::setColor(rlutil::GREEN);
-        cout << "✅ Socio registrado exitosamente." << endl;
+        cout << "Socio registrado exitosamente." << endl;
         break;
 
 
@@ -104,7 +104,7 @@ void mostrarMenuSocio()
                 }
                 if (!hayActivos) {
                     rlutil::setColor(rlutil::RED);
-                    cout << "⚠️  No hay socios activos cargados en el sistema." << endl;
+                    cout << " No hay socios activos cargados en el sistema." << endl;
                 }
             }
 
@@ -134,7 +134,7 @@ void mostrarMenuSocio()
                 s.mostrar();
             } else {
                 rlutil::setColor(rlutil::RED);
-                cout << "⚠️  Socio no encontrado." << endl;
+                cout << "Socio no encontrado." << endl;
             }
         }
         break;
@@ -163,7 +163,7 @@ void mostrarMenuSocio()
 
             if (!encontrado) {
                 rlutil::setColor(rlutil::RED);
-                cout << "⚠️  Socio no encontrado o no está activo." << endl;
+                cout << "Socio no encontrado o no está activo." << endl;
             }
 
         } else {
@@ -190,7 +190,7 @@ void mostrarMenuSocio()
 
         archivo.eliminarLogicamente(nroSocio);
         rlutil::setColor(rlutil::GREEN);
-        cout << "✅ Socio dado de baja del sistema." << endl;
+        cout << "Socio dado de baja del sistema." << endl;
         break;
 
 
@@ -222,7 +222,7 @@ void mostrarMenuSocio()
 
             if (!eliminado) {
                 rlutil::setColor(rlutil::RED);
-                cout << "⚠️  Socio no encontrado o ya estaba eliminado." << endl;
+                cout << "Socio no encontrado o ya estaba eliminado." << endl;
             }
 
         } else {

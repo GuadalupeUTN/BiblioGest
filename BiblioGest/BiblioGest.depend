@@ -460,7 +460,7 @@
 	"ArchivoGeneros.h"
 	"archivoLibros.h"
 
-1751302598 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\libro.cpp
+1751308227 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\libro.cpp
 	<iostream>
 	<string.h>
 	"rlutil.h"
@@ -523,7 +523,7 @@
 	"ArchivoGeneros.h"
 	"ArchivoAutores.h"
 
-1751307705 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menupagos.cpp
+1751308864 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menupagos.cpp
 	<iostream>
 	"rlutil.h"
 	"pagos.h"
@@ -545,7 +545,7 @@
 	"rlutil.h"
 	"funcionesPantallasInteractivas.h"
 
-1751295550 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menusocio.cpp
+1751308204 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menusocio.cpp
 	<iostream>
 	"rlutil.h"
 	"funcionesPantallasInteractivas.h"

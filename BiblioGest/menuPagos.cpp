@@ -31,20 +31,20 @@ void mostrarMenuPagos() {
         rlutil::locate(35, 8);  cout << "1. Registrar un nuevo pago";
         rlutil::locate(35, 9);  cout << "2. Listar pagos por numero de socio";
         rlutil::locate(35, 10); cout << "3. Eliminar pago logicamente (por socio)";
-        rlutil::locate(35, 11); cout << "4. Eliminar pago fisicamente (por socio)";
+        rlutil::locate(35, 11); cout << "4. Eliminar todos los pagos de un socio";
         rlutil::locate(35, 12); cout << "5. Historial de todos los pagos";
         rlutil::locate(35, 13); cout << "6. Buscar pagos por fecha";
         rlutil::locate(35, 14); cout << "7. Listar pagos por DNI";
         rlutil::locate(35, 15); cout << "8. Deuda de socio actual";
         rlutil::locate(35, 16); cout << "9. Deuda de socio por fecha";
-        rlutil::locate(35, 16); cout << "10. Cantidad de meses adeudados";
-        rlutil::locate(35, 16); cout << "11. Editar un pago";
-        rlutil::locate(35, 17); cout << "0. Volver al menu principal";
+        rlutil::locate(35, 17); cout << "10. Cantidad de meses adeudados";
+        rlutil::locate(35, 18); cout << "11. Editar un pago";
+        rlutil::locate(35, 18); cout << "0. Volver al menu principal";
 
         rlutil::setColor(rlutil::LIGHTGREEN);
-        rlutil::locate(35, 19); cout << "Seleccione una opcion: ";
+        rlutil::locate(35, 21); cout << "Seleccione una opcion: ";
         rlutil::setColor(rlutil::WHITE);
-        rlutil::locate(60, 19); cin >> opcion;
+        rlutil::locate(60, 21); cin >> opcion;
         if (cin.fail()) {
                 cout << "ERROR: Ingreso invalido.";
                 cin.clear(); cin.ignore(1000, '\n');
@@ -143,14 +143,33 @@ void mostrarMenuPagos() {
             cout << "Ingrese el numero de socio: ";
             cin >> nroSocio;
             if (cin.fail()) {
-                cout << "❌ ERROR: Ingreso invalido.";
+                cout << "ERROR: Ingreso invalido.";
                 cin.clear(); cin.ignore(1000, '\n');
                 break;
             }
-            if (pagosArchivo.eliminarLogicamente(nroSocio))
-                cout << "✅ Pagos eliminados logicamente.\n";
-            else
-                cout << "⚠️  No se encontraron pagos activos para eliminar.";
+            int mes, anio;
+            cout << "INGRESE EL MES DEL PAGO: ";
+            cin >> mes;
+            cout << "INGRESEEL ANIO DEL PAGO: ";
+            cin >> anio;
+            PagosArchivo a;
+            for(int reg = 0; reg < a.contarRegistros(); reg++)
+            {
+                Pagos p = a.leer(reg);
+                if(p.getNumeroSocio() == nroSocio && p.getAnioPago() == anio && p.getMesPago() == mes)
+                {
+                    p.setEstado(false);
+                    if(!p.getEstado())
+                    {
+                        cout<<"SE HA ELIMINADO EL PAGO"<<endl;
+                    }
+                    else
+                    {
+                        cout<<"HUBO UN ERROR"<<endl;
+                    }
+                }
+            }
+
             break;
         }
 
@@ -159,14 +178,14 @@ void mostrarMenuPagos() {
             cout << "Ingrese el numero de socio: ";
             cin >> nroSocio;
             if (cin.fail()) {
-                cout << "❌ ERROR: Ingreso invalido.\n";
+                cout << "ERROR: Ingreso invalido.";
                 cin.clear(); cin.ignore(1000, '\n');
                 break;
             }
             if (pagosArchivo.eliminarFisicamente(nroSocio))
-                cout << "✅ Pagos eliminados fisicamente.";
+                cout << " Pagos eliminados fisicamente.";
             else
-                cout << "⚠️  No se encontraron pagos para eliminar.";
+                cout << " No se encontraron pagos para eliminar.";
             break;
         }
 
