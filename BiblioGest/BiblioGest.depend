@@ -523,7 +523,7 @@
 	"ArchivoGeneros.h"
 	"ArchivoAutores.h"
 
-1751308864 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menupagos.cpp
+1751309246 source:c:\users\flore\downloads\bkp\bibliogest\bibliogest\menupagos.cpp
 	<iostream>
 	"rlutil.h"
 	"pagos.h"
