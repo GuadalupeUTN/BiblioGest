@@ -3,10 +3,10 @@
 class Autores
 {
 private:
-    static int idAux;
     int _IDAutor;
     char _autor[80];
     int _cantObras;
+    bool _estado;
 public:
     Autores();
     Autores(const char* autor, int cantObras);
@@ -14,11 +14,12 @@ public:
     int getIDAutor();
     const char* getAutor();
     int getCantObras();
+    bool getEstado();
 
+    void setIDAutor(int IDAutor);
     void setAutor(const char* autor);
     void setCantObras(int cantObras);
-
-    static void inicializarID();
+    void setEstado(bool estado);
 
     void cargarAutor();
     void mostrarAutor();
