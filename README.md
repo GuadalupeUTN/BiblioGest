@@ -19,7 +19,6 @@ Este sistema permitirá administrar operaciones relacionadas con la gestión de 
 
 ## Reportes🚨
 Además de las consultas especificadas anteriormente, se efectuarán una serie de reportes que brindarán información valiosa al usuario para la organización de la biblioteca:
-* Alerta de socios con más atrasos en los pagos: A fin de mes se cerrará el pago de la cuota y por lo tanto se comenzará a colocar los usuarios cuyos pagos no fueron efectuados en esta lista. Se les agregará un porcentaje extra por mes hasta que vuelvan a pagar, el cual se incrementará a medida que pase el tiempo.  
 * Ranking de libros con mayores préstamos: Un top de los 10 libros más solicitados, independientemente del género. 
 * Ranking de libros con menores préstamos: para revisar qué libros tienen poco movimiento.
 * Socios con membresía inactiva, pero préstamos activos: para controlar que no se prestan libros a usuarios que no están al día.
