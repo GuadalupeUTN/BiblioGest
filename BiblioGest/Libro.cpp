@@ -123,7 +123,7 @@ void Libro::cargarLibro()
                 int posUltimo = arcGenero.contarRegistros() - 1;
                 gen = arcGenero.leer(posUltimo);
                 _IDGenero = gen.getIDGenero();
-                cout<<"GENERO GUARDADO EXITOSAMENTE";
+                cout<<"GENERO GUARDADO EXITOSAMENTE"<<endl;
 
             }
             else
@@ -171,7 +171,7 @@ void Libro::cargarLibro()
                 int posUltimo = arcAutores.contarRegistros() - 1;
                 au = arcAutores.leer(posUltimo);
                 _IDAutor = au.getIDAutor();
-                cout<<"AUTOR GUARDADO EXITOSAMENTE";
+                cout<<"AUTOR GUARDADO EXITOSAMENTE"<<endl;
             }
             else
             {
@@ -214,7 +214,9 @@ void Libro::mostrarLibro()
 
     autor = arcAutor.leer(_IDAutor - 1);
 
+rlutil::setColor(rlutil::YELLOW);
     cout<<"==================================="<<endl;
+    rlutil::setColor(rlutil::WHITE);
     cout << "ISBN:"<< _ISBN << endl;
 
     cout << "TITULO:" << _titulo << endl;
@@ -226,6 +228,7 @@ void Libro::mostrarLibro()
     cout << "FECHA DE PUBLICACION:"<< _fechaPubli<< endl;
 
     cout << "CANTIDAD DISPONIBLE:" << _cantDisponible << endl;
+    rlutil::setColor(rlutil::YELLOW);
     cout<<"==================================="<<endl;
 
 };

@@ -14,8 +14,7 @@ using namespace std;
 int main()
 {
 PrestamosArchivo arcPrestamo;
-
- //mostrarMenuPrincipal();
+ mostrarMenuPrincipal();
 
     return 0;
 }

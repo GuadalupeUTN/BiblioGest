@@ -46,7 +46,7 @@
 	<iostream>
 	"Socio.h"
 
-1751291189 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\main.cpp
+1751294216 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\main.cpp
 	<iostream>
 	"Libro.h"
 	"Fecha.h"
@@ -73,7 +73,7 @@
 	"Fecha.h"
 	<iostream>
 
-1751291274 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
+1751296955 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\libro.cpp
 	<iostream>
 	<string.h>
 	"rlutil.h"
@@ -121,12 +121,15 @@
 	<string>
 	"Libro.h"
 
-1751291189 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menulibros.cpp
+1751298441 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\menulibros.cpp
 	<iostream>
+	<cstring>
+	"rlutil.h"
 	"funcionesPantallasInteractivas.h"
 	"Libro.h"
 	"archivoLibros.h"
-	<cstring>
+	"ArchivoGeneros.h"
+	"ArchivoAutores.h"
 
 1751277431 source:c:\users\guada\desktop\tp integrador prog2\bibliogest\bibliogest\prestamos.cpp
 	<iostream>

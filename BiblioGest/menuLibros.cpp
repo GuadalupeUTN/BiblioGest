@@ -9,13 +9,16 @@ using namespace std;
 #include "ArchivoAutores.h"
 void mostrarMenuLibros()
 {
+    rlutil::cls();
+    rlutil::showcursor();
     int op;
     Libro milibro;
     LibroArchivo arcLibro;
     do
     {
-
+        rlutil::setColor(rlutil::MAGENTA);
         cout <<"NUESTROS LIBROS"<<endl;
+        rlutil::setColor(rlutil::WHITE);
         cout<<"1-REGISTRAR NUEVO LIBRO"<<endl;
         cout<<"2-NUESTRA BIBLIOTECA"<<endl;
         cout<<"3-EDITAR LIBRO"<<endl;
@@ -32,8 +35,10 @@ void mostrarMenuLibros()
         {
         case 1:
         {
-            cout<<endl;
+            rlutil::cls();
+            rlutil::setColor(rlutil::MAGENTA);
             cout << "================ REGISTRO DE NUEVO LIBRO ================" << endl;
+            rlutil::setColor(rlutil::WHITE);
             milibro.cargarLibro();
             if(arcLibro.guardar(milibro))
             {
@@ -48,16 +53,33 @@ void mostrarMenuLibros()
         break;
         case 2:
         {
+            rlutil::cls();
+            rlutil::setColor(rlutil::MAGENTA);
             cout<<"================ NUESTRA BIBLIOTECA ================" <<endl;
-
+            rlutil::setColor(rlutil::WHITE);
             arcLibro.mostrarListadoLibros();
+            rlutil::showcursor();
+            rlutil::setColor(rlutil::MAGENTA);
+            cout <<"PRESIONE 1 PARA VOLVER AL MENU PRINCIPAL:";
+            rlutil::setColor(rlutil::WHITE);
+            int volver;
+            cin >>volver;
+            if (volver==1)
+            {
+                mostrarMenuLibros();
+
+            }
+            else cout<<"VALOR NO VALIDO. PORFAVOR INGRESE EL VALOR INDICADO";
+
         }
         break;
         case 3:
         {
             rlutil::cls();
             cout << "================ EDITAR UN LIBRO ================" << endl;
-            milibro.editarLibro();}
+            rlutil::setColor(rlutil::WHITE);
+            milibro.editarLibro();
+        }
         break;
         case 4:
             cout << "================ BAJA DE LIBRO ================" << endl;
@@ -80,27 +102,75 @@ void mostrarMenuLibros()
             else cout <<"SE ENCONTRO EL SIGUIENTE RESULTADO:"<<endl;
             Libro lib = arcLibro.leer(pos);
             lib.mostrarLibro();
+            rlutil::showcursor();
+            rlutil::setColor(rlutil::MAGENTA);
+            cout <<"PRESIONE 1 PARA VOLVER AL MENU PRINCIPAL:";
+            rlutil::setColor(rlutil::WHITE);
+            int volver;
+            cin >>volver;
+            if (volver==1)
+            {
+                mostrarMenuLibros();
+
+            }
+            else cout<<"VALOR NO VALIDO. PORFAVOR INGRESE EL VALOR INDICADO";
         }
         break;
         case 6:
         {
             rlutil::cls();
+            rlutil::setColor(rlutil::MAGENTA);
             cout << "================ FILTRAR POR GENERO ================" << endl;
+            rlutil::setColor(rlutil::WHITE);
+            GeneroArchivo arcGenero;
+            arcGenero.mostrarListadoGeneros();
+            rlutil::showcursor();
+
+            rlutil::setColor(rlutil::MAGENTA);
+            ///FALTA FILTRO PARA ENCONTRAR LIBROS CON ID DE ESE GENERO
             cout<< "INGRESE EL ID GENERO DE LOS LIBROS QUE DESEA ENCONTRAR. SI NO ENCUENTRA EL GENERO QUE DESEA EN ESTA LISTA, LAMENTAMOS INFORMARLE QUE NO CONTAMOS CON EJEMPLARES POR EL MOMENTO."<<endl;
             cout << "GENERO:";
             int idGen;
-            GeneroArchivo arcGenero;
             cin >> idGen;
-            arcGenero.mostrarListadoGeneros();
+            //SE VUELVE AL MENU
+            rlutil::setColor(rlutil::MAGENTA);
+            cout <<"PRESIONE 1 PARA VOLVER AL MENU PRINCIPAL:";
+            rlutil::setColor(rlutil::WHITE);
+            int volver;
+            cin >>volver;
+            if (volver==1)
+            {
+                mostrarMenuLibros();
+
+            }
+            else cout<<"VALOR NO VALIDO. PORFAVOR INGRESE EL VALOR INDICADO";
         }
         break;
         case 7:
-        {
-            cout << "================ ENCONTRAR POR AUTOR/A ================" << endl;
+        {            rlutil::cls();
+            rlutil::setColor(rlutil::MAGENTA);
+            cout << "================ FILTRAR POR AUTOR/A ================" << endl;
+                        rlutil::setColor(rlutil::WHITE);
+            AutoresArchivo arcAutores;
+            arcAutores.mostrarListadoAutores();
+
+                        rlutil::setColor(rlutil::MAGENTA);
+            cout <<"PRESIONE 1 PARA VOLVER AL MENU PRINCIPAL:";
+            rlutil::setColor(rlutil::WHITE);
+            int volver;
+            cin >>volver;
+            if (volver==1)
+            {
+                mostrarMenuLibros();
+
+            }
+            else cout<<"VALOR NO VALIDO. PORFAVOR INGRESE EL VALOR INDICADO";
         }
+
         break;
         case 0:
             op=0;
+            mostrarMenuPrincipal();
             break;
         }
     }
