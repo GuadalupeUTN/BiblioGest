@@ -1,25 +1,23 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 #include "Prestamos.h"
 #include "Fecha.h"
 #include "socio.h"
 
-//FALTA ESTADOS
-
 Prestamos::Prestamos(){
 _IDPrestamos=0;
-//IDSocio
-//ISBN
+strcpy(_ISBN,"-");
+_IDSocio=0;
 _fechaPrestamo=Fecha();
 _fechaDevolucion=Fecha();
+_estado=true;
 };
 
-Prestamos::Prestamos( int IDPrestamos, Fecha fechaPrestamo, Fecha fechaDevolucion){
-_IDPrestamos=IDPrestamos;
+Prestamos::Prestamos(Fecha fechaPrestamo, Fecha fechaDevolucion){
+_IDPrestamos=0;
 _fechaPrestamo=fechaPrestamo;
 _fechaDevolucion=fechaDevolucion;
-//IDSocio
-//ISBN
 };
 
 //MEDTODO OBTENER PROX ID-AUTOINCREMENTABLE
@@ -27,6 +25,14 @@ _fechaDevolucion=fechaDevolucion;
 int Prestamos::getIDPrestamos(){
 return _IDPrestamos;
 };
+
+int Prestamos::getIDSocio(){
+return _IDSocio;
+}
+
+const char* Prestamos::getISBN(){
+return _ISBN;
+}
 
 Fecha Prestamos::getFechaPrestamo(){
 return _fechaPrestamo;
@@ -40,6 +46,15 @@ return _fechaDevolucion;
 void Prestamos::setIDPrestamos(int IDPrestamos){
 _IDPrestamos=IDPrestamos;
 };
+
+void Prestamos::setIDSocio(int IDSocio){
+_IDSocio=IDSocio;
+}
+
+void Prestamos::setISBN(const char* ISBN){
+strcpy(_ISBN, ISBN);
+}
+
 void Prestamos::setFechaPrestamo(Fecha fechaPrestamo){
 _fechaPrestamo=fechaPrestamo;
 };
@@ -48,11 +63,9 @@ _fechaDevolucion=fechaDevolucion;
 };
 
 void Prestamos::registrarPrestamo(){
-cout << "INGRESE LOS DATOS REQUERIDOS PARA REGISTRAR PRESTAMO:"<<endl;
-cout <<"IDPrestamo:";
-cin>> _IDPrestamos;
-cout <<endl;
-cout << "Fecha Prestamo:";
+cout << "INGRESE EL ID DEL SOCIO:"<<endl;
+cin >> _IDSocio;
+cout << "AHORA INGRESE LA FECHA DE PRESTAMO:"<<endl;
 this -> _fechaPrestamo.cargar();
 };
 

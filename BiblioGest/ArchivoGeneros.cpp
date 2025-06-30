@@ -9,30 +9,6 @@ GeneroArchivo::GeneroArchivo()
     nombreArchivo="generos.dat";
 };
 
-
-bool GeneroArchivo::guardar(Generos g)
-{
-    FILE *pArchivo = fopen(nombreArchivo, "ab");
-    if (pArchivo == NULL) {
-            return false;}
-
-    bool ok = fwrite(&g, sizeof(Generos), 1, pArchivo);
-    fclose(pArchivo);
-    return ok;
-};
-
-bool GeneroArchivo::guardar(Generos g, int pos)
-{
-    FILE *pArchivo = fopen(nombreArchivo, "rb+");
-    if (pArchivo == NULL){
-            return false;}
-
-    fseek(pArchivo, sizeof(Generos) * pos, SEEK_SET);
-    bool ok = fwrite(&g, sizeof(Generos), 1, pArchivo);
-    fclose(pArchivo);
-    return ok;
-};
-
 Generos GeneroArchivo::leer(int pos)
 {
 
@@ -47,6 +23,43 @@ fread(&g, sizeof(Generos), 1, pArchivo);
     return g;
 
 };
+
+
+bool GeneroArchivo::guardar(Generos& reg)
+{
+    int total = contarRegistros();
+    int ultimoNumero = 0;
+
+    for (int i = total - 1; i >= 0; i--) {
+        Generos g = leer(i);
+        if (g.getEstado()) {
+            ultimoNumero = g.getIDGenero();
+            break;
+        }
+    }
+
+    reg.setIDGenero(ultimoNumero + 1);
+
+    FILE* p = fopen(nombreArchivo, "ab");
+    if (p == nullptr) return false;
+
+    bool exito = fwrite(&reg, sizeof(Generos), 1, p);
+    fclose(p);
+    return exito;
+};
+
+bool GeneroArchivo::guardarEnPosicion(Generos g, int pos)
+{
+    FILE *pArchivo = fopen(nombreArchivo, "rb+");
+    if (pArchivo == NULL){
+            return false;}
+
+    fseek(pArchivo, sizeof(Generos) * pos, SEEK_SET);
+    bool ok = fwrite(&g, sizeof(Generos), 1, pArchivo);
+    fclose(pArchivo);
+    return ok;
+};
+
 
 int GeneroArchivo::contarRegistros()
 {
@@ -94,5 +107,19 @@ int GeneroArchivo::buscarGenero(int _IDGenero)
 
     fclose(pArchivo);
     return -1;
+};
+
+void GeneroArchivo::mostrarListadoGeneros(){
+GeneroArchivo arc;
+int cantidad = arc.contarRegistros();
+Generos* vector = new Generos[cantidad];
+
+arc.leerTodos(cantidad, vector);
+
+for (int i = 0; i < cantidad; i++) {
+    vector[i].mostrarGeneros();
+}
+
+delete[] vector;
 };
 

@@ -8,17 +8,29 @@ AutoresArchivo::AutoresArchivo()
     nombreArchivo="autores.dat";
 };
 
-bool AutoresArchivo::guardar(Autores a){
-    FILE *pArchivo = fopen(nombreArchivo, "ab");
-    if (pArchivo == NULL) {
-            return false;}
+bool AutoresArchivo::guardar(Autores& reg){
+    int total = contarRegistros();
+    int ultimoNumero = 0;
 
-    bool ok = fwrite(&a, sizeof(Autores), 1, pArchivo);
-    fclose(pArchivo);
-    return ok;
+    for (int i = total - 1; i >= 0; i--) {
+       Autores a = leer(i);
+        if (a.getEstado()) {
+            ultimoNumero = a.getIDAutor();
+            break;
+        }
+    }
+
+    reg.setIDAutor(ultimoNumero + 1);
+
+    FILE* p = fopen(nombreArchivo, "ab");
+    if (p == nullptr) return false;
+
+    bool exito = fwrite(&reg, sizeof(Autores), 1, p);
+    fclose(p);
+    return exito;
 };
 
-bool AutoresArchivo::guardar(Autores a, int pos){
+bool AutoresArchivo::guardarEnPosicion(Autores a, int pos){
     FILE *pArchivo = fopen(nombreArchivo, "rb+");
     if (pArchivo == NULL){
             return false;}
@@ -87,4 +99,16 @@ int AutoresArchivo::buscarAutor(int _IDAutor){
     fclose(pArchivo);
     return -1;
 };
+void AutoresArchivo::mostrarListadoAutores(){
+AutoresArchivo arc;
+int cantidad = arc.contarRegistros();
+Autores* vector = new Autores[cantidad];
 
+arc.leerTodos(cantidad, vector);
+
+for (int i = 0; i < cantidad; i++) {
+    vector[i].mostrarAutor();
+}
+
+delete[] vector;
+}

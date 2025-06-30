@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -30,7 +31,7 @@ bool LibroArchivo::guardar(Libro reg)
     return exito;
 };
 
-bool LibroArchivo::guardar(Libro reg, int pos)
+bool LibroArchivo::guardarEnPosicion(Libro reg, int pos)
 {
     FILE* p = fopen(nombreArchivo, "rb+");
     if (p == NULL) return false;
@@ -52,7 +53,7 @@ int LibroArchivo::contarRegistros()
     return tam / sizeof(Libro);
 };
 
-int LibroArchivo::buscarISBN(char _ISBN[13])
+int LibroArchivo::buscarISBN(char _ISBN[14])
 {
     Libro reg;
     int posicion = 0;
@@ -65,7 +66,7 @@ int LibroArchivo::buscarISBN(char _ISBN[13])
 
     while(fread(&reg, sizeof(Libro), 1, p) == 1)
     {
-        if (reg.getISBN() == _ISBN)
+        if (strcmp(reg.getISBN(), _ISBN) == 0)
         {
             fclose(p);
             return posicion;
@@ -76,3 +77,72 @@ int LibroArchivo::buscarISBN(char _ISBN[13])
     fclose(p);
     return -1;
 };
+
+int LibroArchivo::contarCantLibrosPorGenero(int _IDGenero){
+int cantidadLibros=0;
+LibroArchivo arcLibros;
+int totalLibros=arcLibros.contarRegistros();
+for (int i = 0; i < totalLibros; i++){
+Libro lib=arcLibros.leer(i);
+if (lib.getIDGenero()==_IDGenero){
+    cantidadLibros++;
+}
+}
+return cantidadLibros;
+};
+
+int LibroArchivo::contarCantLibrosPorAutor (int _IDAutor){
+int cantidadLibros=0;
+LibroArchivo arcLibros;
+int totalLibros=arcLibros.contarRegistros();
+for (int i = 0; i < totalLibros; i++){
+Libro lib=arcLibros.leer(i);
+if (lib.getIDAutor()==_IDAutor){
+    cantidadLibros++;
+}
+}
+return cantidadLibros;
+};
+
+void LibroArchivo::leerTodos(int cantidadRegistros, Libro *vector){
+    FILE *pArchivo = fopen(nombreArchivo, "rb");
+    if(pArchivo == NULL){
+        return;
+    }
+    for(int i = 0; i < cantidadRegistros; i++){
+        fread(&vector[i], sizeof(Libro), 1, pArchivo);
+    }
+    fclose(pArchivo);
+}
+
+void LibroArchivo::mostrarListadoLibros(){
+LibroArchivo arc;
+int cantidad = arc.contarRegistros();
+Libro* vector = new Libro[cantidad];
+
+arc.leerTodos(cantidad, vector);
+
+for (int i = 0; i < cantidad; i++) {
+    vector[i].mostrarLibro();
+}
+
+delete[] vector;
+}
+
+void LibroArchivo::eliminarRegistroLibro(){
+    /*
+LibroArchivo arc;
+char isbnElegido[14];
+cout << "INGRESE ISBN DEL LIBRO A ELIMINAR:";
+cin.getline(isbnElegido,14);
+cin.ignore();
+int pos = arcLibro.buscarISBN(isbnElegido);
+    if (pos < 0)
+    {
+        cout << "NO SE ENCONTRO EL LIBRO CON ESE ISBN" << endl;
+        return;
+    }
+*/
+
+
+}

@@ -11,12 +11,15 @@ public:
     LibroArchivo();
     Libro leer(int pos);
     bool guardar(Libro reg);
-    bool guardar(Libro reg, int pos);
+    bool guardarEnPosicion(Libro reg, int pos);
     int contarRegistros();
     int buscarISBN(char _ISBN[13]);
-    //buscarTitulo
-    //int buscarAutor
-    //int buscarGenero
+    int contarCantLibrosPorGenero(int _IDGenero);
+    int contarCantLibrosPorAutor (int _IDAutor);
+    void leerTodos(int cantidadRegistros, Libro *vector);
+    void eliminarRegistroLibro();
+    void mostrarListadoLibros();
+    //buscarPorTitulo
 
 };
 

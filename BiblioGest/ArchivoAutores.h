@@ -9,9 +9,10 @@ private:
 public:
     AutoresArchivo();
     Autores leer(int pos);
-    bool guardar(Autores reg);
-    bool guardar(Autores reg, int pos);
+    bool guardar(Autores& reg);
+    bool guardarEnPosicion(Autores reg, int pos);
     int contarRegistros();
     int buscarAutor(int _IDAutor);
     void leerTodos(int cantidadRegistros, Autores *vector);
+    void mostrarListadoAutores();
 };
